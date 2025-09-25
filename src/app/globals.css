@@ -1,0 +1,254 @@
+@import "tailwindcss";
+@import "@fontsource/inter/index.css";
+@import "@fontsource/space-grotesk/index.css";
+
+/* Styrene A Font - Anthropic's official font */
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Thin.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Light.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Regular.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Medium.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Bold.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Styrene A';
+  src: url('/fonts/StyreneAWeb-Black.woff2') format('woff2'),
+       url('/fonts/StyreneAWeb-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 方正兰亭特黑扁简体 - 中文字体 */
+@font-face {
+  font-family: 'FZLanTing';
+  src: url('/fonts/方正兰亭特黑扁简体.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 方正兰亭黑扁简体 - 中文字体 */
+@font-face {
+  font-family: 'FZLanTingHeiBian';
+  src: url('/fonts/FangZhengLanTingHeiBianJianTi.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* 基础色彩 - Anthropic官网配色 */
+  --background: #FAFAF5; /* FAF9F5 - 整体页面底色 */
+  --foreground: #0a0a0a; /* 深色文字 */
+  --surface: #ffffff; /* 白色表面 */
+  --surface-dark: #f8f8f8; /* 浅灰色表面 */
+
+  /* 主色调 - Anthropic焦糖色系 */
+  --primary: #D97758; /* 焦糖色 - 重点色 */
+  --primary-light: #E89B7F; /* 浅焦糖色 */
+  --primary-dark: #C96A45; /* 深焦糖色 */
+
+  /* 辅助色 - 大面积色块颜色 */
+  --accent: #E3D8AC; /* E3D8AC - 大面积色块 */
+  --accent-light: #E8DFB7; /* 浅色块 */
+  --accent-dark: #DEC8BC; /* DEC8BC - 另一个色块 */
+
+  /* 中性色 */
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  /* 字体 - Anthropic风格字体 */
+  --font-heading: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif; /* 主字体 */
+  --font-body: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif; /* 主字体 */
+
+  /* 间距 */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* 边框圆角 - Anthropic风格圆角 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+}
+
+/* 暗色主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #eeece2;
+    --surface: #1a1a1a;
+    --surface-dark: #2a2a2a;
+
+    --primary: #e89b7f;
+    --primary-light: #da7756;
+    --primary-dark: #c96a45;
+
+    --accent: #bd5d3a;
+    --accent-light: #da7756;
+    --accent-dark: #a54f33;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 优化字体渲染 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* 文本选择样式 */
+::selection {
+  background: var(--primary-light);
+  color: var(--background);
+}
+
+/* 焦点样式 */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* 渐变背景 */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+}
+
+/* 玻璃态效果 */
+.glass {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(244, 129, 32, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(244, 129, 32, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
