@@ -11,8 +11,11 @@ export default function ProjectManager() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const projects = [
@@ -75,7 +78,7 @@ export default function ProjectManager() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF5] text-[#0a0a0a]">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation currentPage="工作履历" />
 
       {/* 主要内容 */}
@@ -83,8 +86,8 @@ export default function ProjectManager() {
         <div className="max-w-4xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-[#0a0a0a] mb-6">项目经理</h1>
-            <p className="text-xl text-[#0a0a0a]/80 max-w-2xl mx-auto">
+            <h1 className="text-5xl font-bold text-foreground mb-6">项目经理</h1>
+            <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
               专业的内容策划与项目管理经验，致力于打造优质内容与品牌价值
             </p>
           </div>
@@ -92,22 +95,22 @@ export default function ProjectManager() {
           {/* 时间轴 */}
           <div className="relative">
             {/* 时间轴线 */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#E3D8AC]"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
 
             {projects.map((project, index) => (
               <div key={project.id} className="relative mb-12">
                 {/* 时间轴节点 */}
-                <div className="absolute left-6 w-4 h-4 bg-[#D97758] rounded-full border-4 border-[#FAFAF5]"></div>
+                <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
 
                 {/* 项目卡片 */}
                 <div className="ml-16">
-                  <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#E3D8AC]">
+                  <div className="bg-surface p-8 rounded-2xl shadow-sm border border-gray-300">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-[#0a0a0a] mb-2">{project.company}</h3>
-                        <p className="text-lg text-[#D97758] font-medium">{project.position}</p>
+                        <h3 className="text-2xl font-bold text-foreground mb-2">{project.company}</h3>
+                        <p className="text-lg text-primary font-medium">{project.position}</p>
                       </div>
-                      <div className="flex items-center space-x-4 text-sm text-[#0a0a0a]/60">
+                      <div className="flex items-center space-x-4 text-sm text-foreground-secondary">
                         <div className="flex items-center space-x-1">
                           <Calendar className="w-4 h-4" />
                           <span>{project.period}</span>
@@ -119,17 +122,17 @@ export default function ProjectManager() {
                       </div>
                     </div>
 
-                    <p className="text-[#0a0a0a]/80 mb-6 leading-relaxed">
+                    <p className="text-foreground-secondary mb-6 leading-relaxed">
                       {project.description}
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-[#0a0a0a] mb-3">主要成就：</h4>
+                      <h4 className="font-semibold text-foreground mb-3">主要成就：</h4>
                       <ul className="space-y-2">
                         {project.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-2">
-                            <span className="w-2 h-2 bg-[#D97758] rounded-full mt-2 flex-shrink-0"></span>
-                            <span className="text-[#0a0a0a]/80">{achievement}</span>
+                            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-foreground-secondary">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -139,7 +142,7 @@ export default function ProjectManager() {
                       {project.highlights.map((highlight, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-[#E3D8AC] text-[#0a0a0a] rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-primary-subtle text-foreground rounded-full text-sm font-medium"
                         >
                           {highlight}
                         </span>

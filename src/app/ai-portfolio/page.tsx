@@ -12,8 +12,11 @@ export default function AIPortfolio() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const aiProjects = [
@@ -75,7 +78,7 @@ export default function AIPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF5] text-[#0a0a0a]">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation currentPage="AI作品集" />
 
       {/* 主要内容 */}
@@ -83,19 +86,19 @@ export default function AIPortfolio() {
         <div className="max-w-7xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-[#0a0a0a] mb-6">AI方向作品集</h1>
-            <p className="text-xl text-[#0a0a0a]/80 max-w-2xl mx-auto">
+            <h1 className="text-5xl font-bold text-foreground mb-6">AI方向作品集</h1>
+            <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
               探索人工智能技术在各领域的创新应用，推动技术边界
             </p>
           </div>
 
           {/* 视图切换 */}
           <div className="flex justify-center mb-8">
-            <div className="flex items-center space-x-2 bg-white p-1 rounded-lg border border-[#E3D8AC]">
+            <div className="flex items-center space-x-2 bg-surface p-1 rounded-lg border border-gray-300">
               <button
                 onClick={() => setViewMode('grid')}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-200 ${
-                  viewMode === 'grid' ? 'bg-[#D97758] text-white' : 'text-[#0a0a0a]/80 hover:text-[#D97758]'
+                  viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground-secondary hover:text-primary'
                 }`}
               >
                 <Grid className="w-4 h-4" />
@@ -104,7 +107,7 @@ export default function AIPortfolio() {
               <button
                 onClick={() => setViewMode('list')}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-200 ${
-                  viewMode === 'list' ? 'bg-[#D97758] text-white' : 'text-[#0a0a0a]/80 hover:text-[#D97758]'
+                  viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground-secondary hover:text-primary'
                 }`}
               >
                 <List className="w-4 h-4" />
@@ -120,8 +123,8 @@ export default function AIPortfolio() {
             {aiProjects.map((project) => (
               <div
                 key={project.id}
-                className={`bg-white rounded-2xl overflow-hidden border border-[#E3D8AC] hover:shadow-lg transition-shadow duration-300 ${
-                  project.isMore ? 'bg-[#E3D8AC]' : ''
+                className={`bg-surface rounded-2xl overflow-hidden border border-gray-300 hover:shadow-lg transition-shadow duration-300 ${
+                  project.isMore ? 'bg-primary-subtle' : ''
                 }`}
               >
                 <div className="relative">
@@ -143,14 +146,14 @@ export default function AIPortfolio() {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.isMore ? 'bg-[#D97758] text-white' : 'bg-[#E3D8AC] text-[#0a0a0a]'
+                      project.isMore ? 'bg-primary text-white' : 'bg-accent text-foreground'
                     }`}>
                       {project.category}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#0a0a0a] mb-3">{project.title}</h3>
-                  <p className="text-[#0a0a0a]/80 mb-4 leading-relaxed">
+                  <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+                  <p className="text-foreground-secondary mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -158,7 +161,7 @@ export default function AIPortfolio() {
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-[#F5F5F5] text-[#0a0a0a]/70 rounded text-sm"
+                        className="px-2 py-1 bg-gray-100 text-foreground-secondary rounded text-sm"
                       >
                         {tag}
                       </span>
@@ -168,7 +171,7 @@ export default function AIPortfolio() {
                   {!project.isMore && (
                     <a
                       href={project.link}
-                      className="inline-flex items-center space-x-2 text-[#D97758] hover:text-[#C96A45] transition-colors duration-200 font-medium"
+                      className="inline-flex items-center space-x-2 text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
                     >
                       <span>查看详情</span>
                       <ExternalLink className="w-4 h-4" />
@@ -178,7 +181,7 @@ export default function AIPortfolio() {
                   {project.isMore && (
                     <a
                       href={project.link}
-                      className="inline-flex items-center space-x-2 text-[#0a0a0a] hover:text-[#D97758] transition-colors duration-200 font-medium"
+                      className="inline-flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
                     >
                       <span>查看完整作品集</span>
                       <ExternalLink className="w-4 h-4" />

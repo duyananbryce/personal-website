@@ -1,8 +1,19 @@
+/**
+ * 全局样式文件 - 杜亚楠个人作品集网站
+ * 
+ * 本文件定义了网站的全局样式，包括：
+ * - 字体导入和配置（西文字体和中文字体）
+ * - CSS变量定义（色彩、间距、圆角、阴影等）
+ * - Tailwind CSS主题配置
+ * - 暗色主题支持
+ * - 自定义滚动条、文本选择等基础样式
+ * - 渐变背景、玻璃态效果、动画等高级样式
+ */
 @import "tailwindcss";
 @import "@fontsource/inter/index.css";
 @import "@fontsource/space-grotesk/index.css";
 
-/* Styrene A Font - Anthropic's official font */
+/* Styrene A 字体 - Anthropic官方西文字体 */
 @font-face {
   font-family: 'Styrene A';
   src: url('/fonts/StyreneAWeb-Thin.woff2') format('woff2'),
@@ -57,7 +68,7 @@
   font-display: swap;
 }
 
-/* 方正兰亭特黑扁简体 - 中文字体 */
+/* 方正兰亭特黑扁简体 - 中文字体（标题用） */
 @font-face {
   font-family: 'FZLanTing';
   src: url('/fonts/方正兰亭特黑扁简体.ttf') format('truetype');
@@ -66,7 +77,7 @@
   font-display: swap;
 }
 
-/* 方正兰亭黑扁简体 - 中文字体 */
+/* 方正兰亭黑扁简体 - 中文字体（正文用） */
 @font-face {
   font-family: 'FZLanTingHeiBian';
   src: url('/fonts/FangZhengLanTingHeiBianJianTi.ttf') format('truetype');
@@ -76,39 +87,47 @@
 }
 
 :root {
-  /* 基础色彩 - Anthropic官网配色 */
-  --background: #FAFAF5; /* FAF9F5 - 整体页面底色 */
-  --foreground: #0a0a0a; /* 深色文字 */
-  --surface: #ffffff; /* 白色表面 */
-  --surface-dark: #f8f8f8; /* 浅灰色表面 */
+  /* 基础色彩系统 - 现代简约主义暖色调 */
+  --background: #FAF9F5; /* 暖米白背景 */
+  --foreground: #141413; /* 主文字色 - 近黑色 */
+  --foreground-secondary: #5E5D59; /* 次要文字色 - 深灰色 */
+  --foreground-tertiary: #87867F; /* 第三级文字色 - 中灰色 */
+  --surface: #FFFFFF; /* 纯白表面 */
+  --surface-dark: #F5F4ED; /* 暖米色表面 */
 
-  /* 主色调 - Anthropic焦糖色系 */
-  --primary: #D97758; /* 焦糖色 - 重点色 */
-  --primary-light: #E89B7F; /* 浅焦糖色 */
-  --primary-dark: #C96A45; /* 深焦糖色 */
+  /* 边框色系统 - 三级灰度层次 */
+  --border-light: #F0EEE6; /* 最浅边框 - 微妙分隔 */
+  --border: #E8E6DC; /* 中等边框 - 普通分隔 */
+  --border-dark: #DEDCD1; /* 深边框 - 强调分隔 */
 
-  /* 辅助色 - 大面积色块颜色 */
-  --accent: #E3D8AC; /* E3D8AC - 大面积色块 */
-  --accent-light: #E8DFB7; /* 浅色块 */
-  --accent-dark: #DEC8BC; /* DEC8BC - 另一个色块 */
+  /* 主色调系统 - 焦糖珊瑚色系 */
+  --primary: #D97757; /* 主珊瑚色 - 温暖橙红色 */
+  --primary-light: #E59980; /* 浅珊瑚色 - 悬停状态 */
+  --primary-dark: #B85A3D; /* 深珊瑚色 - 边框强调 */
+  --primary-subtle: rgba(217, 119, 87, 0.1); /* 极淡珊瑚背景 */
 
-  /* 中性色 */
-  --gray-50: #FAFAFA;
-  --gray-100: #F5F5F5;
-  --gray-200: #EEEEEE;
-  --gray-300: #E0E0E0;
-  --gray-400: #BDBDBD;
-  --gray-500: #9E9E9E;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
+  /* 辅助色系统 - 现代简洁色系 */
+  --accent: #F5F4ED; /* 暖米色背景 */
+  --accent-light: #FAF9F5; /* 更浅暖米色 */
+  --accent-dark: #E8E6DC; /* 暖灰色背景 */
 
-  /* 字体 - Anthropic风格字体 */
-  --font-heading: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif; /* 主字体 */
-  --font-body: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif; /* 主字体 */
+  /* 中性色系统 - 精致灰度色系 */
+  --gray-50: #FAF9F5;
+  --gray-100: #F5F4ED;
+  --gray-200: #E8E6DC;
+  --gray-300: #DEDCD1;
+  --gray-400: #D4D2C8;
+  --gray-500: #A9A8A0;
+  --gray-600: #87867F;
+  --gray-700: #5E5D59;
+  --gray-800: #3B3A37;
+  --gray-900: #141413;
 
-  /* 间距 */
+  /* 字体系统 - Claude风格字体 */
+  --font-heading: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Styrene A', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* 间距系统 - 现代简约主义间距系统 */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -116,32 +135,51 @@
   --space-xl: 3rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
+  --space-4xl: 8rem;
+  --space-5xl: 10rem;
 
-  /* 边框圆角 - Anthropic风格圆角 */
+  /* 边框圆角系统 - 精致圆角系统 */
   --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
+  --radius-md: 0.375rem; /* 6px - 按钮圆角 */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
 
-  /* 阴影 */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  /* 阴影系统 - 精致阴影系统 */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
+  --shadow-primary: 0 0 20px rgba(217, 119, 87, 0.15); /* 主色调阴影 */
 }
 
+/**
+ * Tailwind CSS 主题配置
+ * 将CSS变量映射到Tailwind CSS中，使其可以在JSX中直接使用
+ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
   --color-surface-dark: var(--surface-dark);
+  --color-border: var(--border);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-subtle: var(--primary-subtle);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
   --color-accent-dark: var(--accent-dark);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
 
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
@@ -153,44 +191,51 @@
   --radius-2xl: var(--radius-2xl);
 }
 
-/* 暗色主题 */
+/* 暗色主题 - Claude官网风格适配 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #eeece2;
-    --surface: #1a1a1a;
-    --surface-dark: #2a2a2a;
+    --background: #0F0F0F;
+    --foreground: #F5F5F5;
+    --foreground-secondary: #A3A3A3;
+    --surface: #1A1A1A;
+    --surface-dark: #262626;
+    --border: #404040;
 
-    --primary: #e89b7f;
-    --primary-light: #da7756;
-    --primary-dark: #c96a45;
+    --primary: #FF8C5A;
+    --primary-light: #FF6B35;
+    --primary-dark: #E55A2B;
+    --primary-subtle: #2A1F1C;
 
-    --accent: #bd5d3a;
-    --accent-light: #da7756;
-    --accent-dark: #a54f33;
+    --accent: #262626;
+    --accent-light: #1A1A1A;
+    --accent-dark: #404040;
   }
 }
 
+/**
+ * 基础样式 - 页面整体设置
+ * 设置背景色、文字色、字体、行高等基础属性
+ */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* 字体平滑渲染 */
+  -moz-osx-font-smoothing: grayscale; /* Firefox字体渲染 */
 }
 
-/* 优化字体渲染 */
+/* 标题字体优化 */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
 }
 
-/* 自定义滚动条 */
+/* 自定义滚动条样式 */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 8px;  /* 滚动条宽度 */
+  height: 8px; /* 滚动条高度 */
 }
 
 ::-webkit-scrollbar-track {
@@ -206,19 +251,19 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gray-500);
 }
 
-/* 文本选择样式 */
+/* 文本选择样式 - 使用主题色 */
 ::selection {
   background: var(--primary-light);
   color: var(--background);
 }
 
-/* 焦点样式 */
+/* 焦点样式 - 无障碍访问支持 */
 :focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-/* 渐变背景 */
+/* 渐变背景工具类 */
 .gradient-primary {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
 }
@@ -227,28 +272,30 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
 }
 
-/* 玻璃态效果 */
+/* 玻璃态效果工具类 */
 .glass {
-  backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px); /* 背景模糊 */
+  background: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 玻璃边框 */
 }
 
-/* 动画 */
+/* 动画系统 */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-10px); } /* 上浮10px */
 }
 
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(244, 129, 32, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(244, 129, 32, 0.6); }
+  50% { box-shadow: 0 0 40px rgba(244, 129, 32, 0.6); } /* 脉冲发光效果 */
 }
 
+/* 浮动动画工具类 */
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
+/* 脉冲发光动画工具类 */
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }

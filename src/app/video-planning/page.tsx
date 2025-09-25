@@ -11,8 +11,11 @@ export default function VideoPlanning() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const videoProjects = [
@@ -169,7 +172,7 @@ export default function VideoPlanning() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF5] text-[#0a0a0a]">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation currentPage="视频策划" />
 
       {/* 主要内容 */}
@@ -177,33 +180,33 @@ export default function VideoPlanning() {
         <div className="max-w-7xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-[#0a0a0a] mb-6">视频策划</h1>
-            <p className="text-xl text-[#0a0a0a]/80 max-w-2xl mx-auto">
+            <h1 className="text-5xl font-bold text-foreground mb-6">视频策划</h1>
+            <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
               专业的视频内容策划与制作，涵盖动画、教育、商业等多个领域
             </p>
           </div>
 
           {/* 统计概览 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-[#E3D8AC] p-6 rounded-2xl text-center">
-              <Film className="w-8 h-8 text-[#D97758] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[#0a0a0a]">500+</div>
-              <div className="text-[#0a0a0a]/80">视频作品</div>
+            <div className="bg-primary-subtle p-6 rounded-2xl text-center">
+              <Film className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-2xl font-bold text-foreground">500+</div>
+              <div className="text-foreground-secondary">视频作品</div>
             </div>
-            <div className="bg-[#DEC8BC] p-6 rounded-2xl text-center">
-              <Eye className="w-8 h-8 text-[#D97758] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[#0a0a0a]">15亿+</div>
-              <div className="text-[#0a0a0a]/80">总播放量</div>
+            <div className="bg-accent p-6 rounded-2xl text-center">
+              <Eye className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-2xl font-bold text-foreground">15亿+</div>
+              <div className="text-foreground-secondary">总播放量</div>
             </div>
-            <div className="bg-[#E8DFB7] p-6 rounded-2xl text-center">
-              <Users className="w-8 h-8 text-[#D97758] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[#0a0a0a]">1000万+</div>
-              <div className="text-[#0a0a0a]/80">粉丝数</div>
+            <div className="bg-gray-100 p-6 rounded-2xl text-center">
+              <Users className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-2xl font-bold text-foreground">1000万+</div>
+              <div className="text-foreground-secondary">粉丝数</div>
             </div>
-            <div className="bg-[#E3D8AC] p-6 rounded-2xl text-center">
-              <TrendingUp className="w-8 h-8 text-[#D97758] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[#0a0a0a]">6个</div>
-              <div className="text-[#0a0a0a]/80">内容领域</div>
+            <div className="bg-primary-subtle p-6 rounded-2xl text-center">
+              <TrendingUp className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-2xl font-bold text-foreground">6个</div>
+              <div className="text-foreground-secondary">内容领域</div>
             </div>
           </div>
 
@@ -212,7 +215,7 @@ export default function VideoPlanning() {
             {videoProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl overflow-hidden border border-[#E3D8AC] hover:shadow-lg transition-all duration-300"
+                className="bg-surface rounded-2xl overflow-hidden border border-gray-300 hover:shadow-lg transition-all duration-300"
               >
                 {/* 视频预览区 */}
                 <div className="relative">
@@ -226,7 +229,7 @@ export default function VideoPlanning() {
                   {/* 播放按钮 */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 cursor-pointer">
-                      <Play className="w-8 h-8 text-[#D97758]" />
+                      <Play className="w-8 h-8 text-primary" />
                     </div>
                   </div>
 
@@ -238,7 +241,7 @@ export default function VideoPlanning() {
                     >
                       {project.status}
                     </span>
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[#0a0a0a]">
+                    <span className="px-3 py-1 bg-surface/90 backdrop-blur-sm rounded-full text-xs font-medium text-foreground">
                       {project.category}
                     </span>
                   </div>
@@ -257,12 +260,12 @@ export default function VideoPlanning() {
                     <div className="md:col-span-2">
                       {/* 核心亮点 */}
                       <div className="mb-6">
-                        <h4 className="font-semibold text-[#0a0a0a] mb-3">核心亮点：</h4>
+                        <h4 className="font-semibold text-foreground mb-3">核心亮点：</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.highlights.map((highlight, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-[#E3D8AC] text-[#0a0a0a] rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-primary-subtle text-foreground rounded-full text-sm font-medium"
                             >
                               {highlight}
                             </span>
@@ -272,19 +275,19 @@ export default function VideoPlanning() {
 
                       {/* 主要成就 */}
                       <div className="mb-6">
-                        <h4 className="font-semibold text-[#0a0a0a] mb-3">主要成就：</h4>
+                        <h4 className="font-semibold text-foreground mb-3">主要成就：</h4>
                         <ul className="space-y-2">
                           {project.achievements.map((achievement, idx) => (
                             <li key={idx} className="flex items-start space-x-2">
-                              <span className="w-2 h-2 bg-[#D97758] rounded-full mt-2 flex-shrink-0"></span>
-                              <span className="text-[#0a0a0a]/80">{achievement}</span>
+                              <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                              <span className="text-foreground-secondary">{achievement}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       {/* 时间线 */}
-                      <div className="flex items-center space-x-2 text-sm text-[#0a0a0a]/60">
+                      <div className="flex items-center space-x-2 text-sm text-foreground-secondary">
                         <Clock className="w-4 h-4" />
                         <span>{project.timeline}</span>
                       </div>
@@ -295,8 +298,8 @@ export default function VideoPlanning() {
                       {/* 数据统计 */}
                       <div className="grid grid-cols-1 gap-3">
                         {Object.entries(project.stats).map(([key, value]) => (
-                          <div key={key} className="flex items-center justify-between p-3 bg-[#FAFAF5] rounded-lg">
-                            <span className="text-sm text-[#0a0a0a]/70">
+                          <div key={key} className="flex items-center justify-between p-3 bg-gray-100 rounded-lg">
+                            <span className="text-sm text-foreground-secondary">
                               {key === 'views' ? '播放量' :
                                key === 'likes' ? '点赞量' :
                                key === 'episodes' ? '集数' :
@@ -313,19 +316,19 @@ export default function VideoPlanning() {
                                key === 'team' ? '团队' :
                                key === 'research' ? '调研' : key}
                             </span>
-                            <span className="font-bold text-[#D97758]">{value}</span>
+                            <span className="font-bold text-primary">{value}</span>
                           </div>
                         ))}
                       </div>
 
                       {/* 平台 */}
                       <div>
-                        <h4 className="font-semibold text-[#0a0a0a] mb-2">播出平台：</h4>
+                        <h4 className="font-semibold text-foreground mb-2">播出平台：</h4>
                         <div className="flex flex-wrap gap-1">
                           {project.platforms.map((platform, idx) => (
                             <span
                               key={idx}
-                              className="px-2 py-1 bg-[#F5F5F5] text-[#0a0a0a]/70 rounded text-xs"
+                              className="px-2 py-1 bg-gray-100 text-foreground-secondary rounded text-xs"
                             >
                               {platform}
                             </span>
@@ -335,12 +338,12 @@ export default function VideoPlanning() {
 
                       {/* 标签 */}
                       <div>
-                        <h4 className="font-semibold text-[#0a0a0a] mb-2">标签：</h4>
+                        <h4 className="font-semibold text-foreground mb-2">标签：</h4>
                         <div className="flex flex-wrap gap-1">
                           {project.tags.map((tag, idx) => (
                             <span
                               key={idx}
-                              className="px-2 py-1 bg-[#DEC8BC] text-[#0a0a0a]/70 rounded text-xs"
+                              className="px-2 py-1 bg-accent text-foreground-secondary rounded text-xs"
                             >
                               {tag}
                             </span>
@@ -351,7 +354,7 @@ export default function VideoPlanning() {
                       {/* 查看详情 */}
                       <a
                         href={project.link}
-                        className="w-full inline-flex items-center justify-center space-x-2 bg-[#D97758] text-white px-6 py-3 rounded-lg hover:bg-[#C96A45] transition-colors duration-200 font-medium"
+                        className="w-full inline-flex items-center justify-center space-x-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium"
                       >
                         <span>查看详情</span>
                         <ExternalLink className="w-4 h-4" />
@@ -365,27 +368,27 @@ export default function VideoPlanning() {
 
           {/* 底部说明 */}
           <div className="mt-16 text-center">
-            <div className="bg-[#E3D8AC] p-8 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-[#0a0a0a] mb-4">视频策划能力</h3>
-              <p className="text-[#0a0a0a]/80 leading-relaxed mb-6">
+            <div className="bg-primary-subtle p-8 rounded-2xl max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4">视频策划能力</h3>
+              <p className="text-foreground-secondary leading-relaxed mb-6">
                 具备从内容策划到制作执行的全流程视频制作经验，擅长创意构思、脚本撰写、
                 拍摄指导和后期制作。在多个领域都有成功的作品，能够根据不同平台特性和受众需求
                 制作出具有传播力的优质内容。
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-surface text-foreground rounded-full text-sm font-medium">
                   内容策划
                 </span>
-                <span className="px-4 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-surface text-foreground rounded-full text-sm font-medium">
                   脚本创作
                 </span>
-                <span className="px-4 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-surface text-foreground rounded-full text-sm font-medium">
                   拍摄指导
                 </span>
-                <span className="px-4 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-surface text-foreground rounded-full text-sm font-medium">
                   后期制作
                 </span>
-                <span className="px-4 py-2 bg-white text-[#0a0a0a] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-surface text-foreground rounded-full text-sm font-medium">
                   平台运营
                 </span>
               </div>
