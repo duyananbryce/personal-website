@@ -47,10 +47,11 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
   const navItems = ['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'];
 
   return (
-    {/* 导航栏容器 - 固定顶部，带滚动效果 */}
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-background'
-    } border-b border-gray-200`}>
+    <>
+      {/* 导航栏容器 - 固定顶部，带滚动效果 */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-background'
+      } border-b border-gray-200`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo区域 */}
@@ -113,5 +114,6 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
         )}
       </div>
     </nav>
+    </>
   );
 }

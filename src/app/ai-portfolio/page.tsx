@@ -1,12 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ExternalLink, Grid, List } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 
 export default function AIPortfolio() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,62 +17,18 @@ export default function AIPortfolio() {
     }
   }, []);
 
-  const aiProjects = [
-    {
-      id: 1,
-      title: "AI内容生成系统",
-      category: "AI应用",
-      description: "基于GPT的内容自动生成平台，支持多种内容类型创作",
-      image: "/api/placeholder/400/300",
-      tags: ["GPT", "内容生成", "自动化"],
-      link: "#"
-    },
-    {
-      id: 2,
-      title: "智能视频剪辑工具",
-      category: "AI工具",
-      description: "利用AI技术自动识别视频重点，生成精彩片段剪辑",
-      image: "/api/placeholder/400/300",
-      tags: ["视频处理", "计算机视觉", "自动化"],
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "AI驱动的数据分析平台",
-      category: "数据科学",
-      description: "智能数据分析和可视化平台，提供深度洞察",
-      image: "/api/placeholder/400/300",
-      tags: ["数据分析", "机器学习", "可视化"],
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "智能客服机器人",
-      category: "AI应用",
-      description: "基于大语言模型的智能客服系统，提供24/7服务",
-      image: "/api/placeholder/400/300",
-      tags: ["NLP", "客服", "自动化"],
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "AI图像风格迁移",
-      category: "计算机视觉",
-      description: "艺术风格迁移应用，让普通照片变成艺术品",
-      image: "/api/placeholder/400/300",
-      tags: ["图像处理", "风格迁移", "艺术"],
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "更多AI项目",
-      category: "查看全部",
-      description: "查看完整的AI方向作品集",
-      image: "/api/placeholder/400/300",
-      tags: ["更多项目"],
-      link: "#",
-      isMore: true
-    }
+  // AI作品集页面数据
+  const portfolioPages = [
+    { id: 1, image: "/ai-portfolio/page-1.png", title: "AI创意作品集 - 第1页" },
+    { id: 2, image: "/ai-portfolio/page-2.png", title: "AI创意作品集 - 第2页" },
+    { id: 3, image: "/ai-portfolio/page-3.png", title: "AI创意作品集 - 第3页" },
+    { id: 4, image: "/ai-portfolio/page-4.png", title: "AI创意作品集 - 第4页" },
+    { id: 5, image: "/ai-portfolio/page-5.png", title: "AI创意作品集 - 第5页" },
+    { id: 6, image: "/ai-portfolio/page-6.png", title: "AI创意作品集 - 第6页" },
+    { id: 7, image: "/ai-portfolio/page-7.png", title: "AI创意作品集 - 第7页" },
+    { id: 8, image: "/ai-portfolio/page-8.png", title: "AI创意作品集 - 第8页" },
+    { id: 9, image: "/ai-portfolio/page-9.png", title: "AI创意作品集 - 第9页" },
+    { id: 10, image: "/ai-portfolio/page-10.png", title: "AI创意作品集 - 第10页" },
   ];
 
   return (
@@ -82,114 +36,74 @@ export default function AIPortfolio() {
       <Navigation currentPage="AI作品集" />
 
       {/* 主要内容 */}
-      <main className="pt-24 pb-16 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-24 pb-16">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* 页面标题 */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-foreground mb-6">AI方向作品集</h1>
+            <h1 className="text-5xl font-bold text-foreground mb-6">AI创意作品集</h1>
             <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
-              探索人工智能技术在各领域的创新应用，推动技术边界
+              探索人工智能在创意领域的无限可能，展现技术与艺术的完美融合
             </p>
           </div>
 
-          {/* 视图切换 */}
-          <div className="flex justify-center mb-8">
-            <div className="flex items-center space-x-2 bg-surface p-1 rounded-lg border border-gray-300">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-200 ${
-                  viewMode === 'grid' ? 'bg-primary text-white' : 'text-foreground-secondary hover:text-primary'
-                }`}
-              >
-                <Grid className="w-4 h-4" />
-                <span>网格视图</span>
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-200 ${
-                  viewMode === 'list' ? 'bg-primary text-white' : 'text-foreground-secondary hover:text-primary'
-                }`}
-              >
-                <List className="w-4 h-4" />
-                <span>列表视图</span>
-              </button>
-            </div>
-          </div>
-
-          {/* 作品集网格 */}
-          <div className={`grid gap-6 ${
-            viewMode === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'
-          }`}>
-            {aiProjects.map((project) => (
+          {/* 页面展示区域 */}
+          <div className="flex flex-col items-center">
+            {portfolioPages.map((page, index) => (
               <div
-                key={project.id}
-                className={`bg-surface rounded-2xl overflow-hidden border border-gray-300 hover:shadow-lg transition-shadow duration-300 ${
-                  project.isMore ? 'bg-primary-subtle' : ''
-                }`}
+                key={page.id}
+                className="relative group w-full max-w-5xl mx-auto mb-6"
               >
-                <div className="relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  {project.isMore && (
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <div className="text-white text-center">
-                        <div className="text-4xl mb-2">+</div>
-                        <div className="text-lg font-medium">查看更多</div>
-                      </div>
+                {/* 页面容器 - 模拟真实页面效果 */}
+                <div className="relative bg-white rounded-lg shadow-lg overflow-hidden
+                            border-2 border-gray-100
+                            hover:shadow-2xl transition-all duration-500
+                            hover:border-primary/20
+                            transform hover:scale-[1.02]">
+                  
+                  {/* 页面阴影效果 */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* 页面图片 */}
+                  <div className="relative w-full">
+                    <img
+                      src={page.image}
+                      alt={page.title}
+                      className="w-full h-auto object-contain"
+                      loading={index < 3 ? 'eager' : 'lazy'} // 前三页优先加载
+                    />
+                    
+                    {/* 页码指示器 */}
+                    <div className="absolute top-6 right-6 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg">
+                      {page.id} / {portfolioPages.length}
                     </div>
-                  )}
+
+                    {/* 页面装饰线条 */}
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+                    <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+                  </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      project.isMore ? 'bg-primary text-white' : 'bg-accent text-foreground'
-                    }`}>
-                      {project.category}
-                    </span>
-                  </div>
+                {/* 页面间的细缝效果 */}
+                {index < portfolioPages.length - 1 && (
+                  <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-60"></div>
+                )}
 
-                  <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
-                  <p className="text-foreground-secondary mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-gray-100 text-foreground-secondary rounded text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {!project.isMore && (
-                    <a
-                      href={project.link}
-                      className="inline-flex items-center space-x-2 text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
-                    >
-                      <span>查看详情</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
-
-                  {project.isMore && (
-                    <a
-                      href={project.link}
-                      className="inline-flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                    >
-                      <span>查看完整作品集</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
+                {/* 页面标题 (悬停时显示) */}
+                <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-l-xl text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap shadow-lg">
+                  第{page.id}页
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* 返回顶部按钮 */}
+          <div className="text-center mt-16">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center space-x-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium"
+            >
+              <span>返回顶部</span>
+            </button>
           </div>
         </div>
       </main>
