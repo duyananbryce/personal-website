@@ -201,32 +201,32 @@ export default function Home() {
 
             {[
               {
-                company: "啊哈娱乐 (Aha Entertainment)",
-                position: "市场部经理",
-                period: "2020.03 - 2021.08",
-                description: "负责短视频内容策划与制作管理，策划制作短视频内容累计获得9000万+播放量，管理内容团队，提升内容质量和传播效果",
-                highlights: ["9000万+播放量", "团队管理", "市场策略"]
+                company: "啊哈娱乐",
+                position: "市场营销经理",
+                period: "2024.10 - 至今",
+                description: "负责啊哈娱乐旗下《伍六七》IP的市场营销工作，包含《伍六七》动画第五季的市场营销工作、以及音乐巡演、手游、衍生品等市场推广。",
+                highlights: ["IP营销", "动画推广", "音乐巡演", "手游推广", "衍生品"]
               },
               {
-                company: "猿辅导 (Yuanfudao)",
-                position: "营销策划专员",
-                period: "2019.06 - 2020.02",
-                description: "负责教育产品营销策划与品牌推广，策划多场成功的品牌营销活动，负责社交媒体内容策略制定",
-                highlights: ["品牌营销", "社交媒体", "用户增长"]
+                company: "猿辅导在线教育",
+                position: "视频编导",
+                period: "2022.12 - 2024.10",
+                description: "负责猿辅导电商直播的短视频生产工作，包括脚本创作、拍摄、剪辑等；参与信息流短视频投放工作，负责千川、随心推的推广计划搭建；负责电商直播间的搭建、日常维护，以及户外直播活动的支持。",
+                highlights: ["视频制作", "直播运营", "信息流投放", "脚本创作"]
               },
               {
-                company: "猿辅导 (Yuanfudao)",
+                company: "站酷网",
+                position: "抖音短视频运营",
+                period: "2021.8 - 2022.12",
+                description: "从零到一搭建新媒体视频矩阵，负责站酷网官方抖音、B站、小红书账号的视频运营；为公司相关活动提供内容创意，提升活动效果。",
+                highlights: ["账号运营", "内容策划", "视频制作", "品牌传播"]
+              },
+              {
+                company: "猿辅导在线教育",
                 position: "内容运营",
-                period: "2019.03 - 2019.06",
-                description: "负责在线教育内容的运营和推广，协助品牌知名度提升和用户增长",
-                highlights: ["内容运营", "用户增长", "教育产品"]
-              },
-              {
-                company: "站酷网 (Zcool)",
-                position: "视频内容策划",
-                period: "2018.09 - 2019.05",
-                description: "负责创意设计平台的视频内容策划，策划制作设计师访谈系列视频，与知名品牌合作推广设计理念",
-                highlights: ["品牌合作", "设计师访谈", "内容策划"]
+                period: "2020.6 - 2021.8",
+                description: "独立负责小猿搜题APP抖音、B站官方账号的内容更新和账号运营；负责小猿搜题社区多个栏目的内容制作；在重大活动节点策划品牌内容活动和落地执行。",
+                highlights: ["账号运营", "内容创作", "爆款策划", "品牌推广"]
               }
             ].map((experience, index) => (
               <div key={index} className="relative mb-12 last:mb-0">
@@ -238,13 +238,15 @@ export default function Home() {
                 {/* 经历卡片 - 现代设计 */}
                 <div className="ml-20">
                   <div className="bg-background border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-foreground mb-2 tracking-tight">{experience.company}</h3>
-                        <p className="text-lg text-primary font-medium">{experience.position}</p>
-                      </div>
-                      <div className="text-base text-foreground-tertiary mt-3 md:mt-0 bg-accent px-3 py-1 rounded-full">
-                        {experience.period}
+                    <div className="mb-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="text-xl font-bold text-foreground mb-2 tracking-tight">{experience.company}</h3>
+                          <p className="text-lg text-primary font-medium">{experience.position}</p>
+                        </div>
+                        <div className="text-xl text-foreground bg-border px-3 py-1 rounded-full text-left whitespace-nowrap">
+                          {experience.period}
+                        </div>
                       </div>
                     </div>
 

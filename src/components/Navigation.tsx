@@ -48,74 +48,80 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
 
   return (
     <>
-      {/* 导航栏容器 - 固定顶部，带滚动效果 */}
+      {/* 顶部导航栏 - 现代简约主义透明背景 */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-background'
-      } border-b border-gray-200`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo区域 */}
-          <div className="flex items-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <div className="logo-aggressive w-full h-full flex items-center justify-center">
-          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
-        </div>
+        isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm border-b border-border-light' : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex justify-between items-center h-24">
+            {/* Logo */}
+            <div className="flex items-center">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="logo-clean w-full h-full flex items-center justify-center">
+                    <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+                  </div>
+                </div>
+                <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>
               </div>
-              <span className="font-bold text-xl text-foreground">作品集</span>
             </div>
-          </div>
 
-          {/* 桌面端导航菜单 */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
-                  item === 'AI作品集' ? 'ai-portfolio' :
-                  item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
-                className={`text-foreground hover:text-primary transition-colors duration-200 font-medium ${
-                  item === currentPage ? 'text-primary' : ''
-                }`}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* 移动端菜单按钮 */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-foreground hover:text-primary transition-colors duration-200"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* 移动端下拉菜单 */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-background">
-            <div className="px-6 py-6 space-y-6">
-              {navItems.map((item) => (
+            {/* 桌面端导航 */}
+            <div className="hidden lg:flex items-center space-x-12">
+              {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
                 <a
                   key={item}
                   href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                     item === 'AI作品集' ? 'ai-portfolio' :
                     item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
-                  className={`block text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg ${
+                  className={`relative text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg tracking-wide ${
                     item === currentPage ? 'text-primary' : ''
                   }`}
                 >
                   {item}
+                  {item === currentPage && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                  )}
                 </a>
               ))}
             </div>
+
+            {/* 移动端菜单按钮 */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-foreground hover:text-primary transition-colors duration-200"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
-        )}
-      </div>
-    </nav>
+
+          {/* 移动端菜单 */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+              <div className="px-6 py-8 space-y-6">
+                {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
+                  <a
+                    key={item}
+                    href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
+                      item === 'AI作品集' ? 'ai-portfolio' :
+                      item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
+                    className={`relative block text-foreground hover:text-primary transition-colors duration-200 font-medium text-xl py-2 ${
+                      item === currentPage ? 'text-primary' : ''
+                    }`}
+                  >
+                    {item}
+                    {item === currentPage && (
+                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
     </>
   );
 }
