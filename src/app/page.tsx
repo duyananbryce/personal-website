@@ -499,38 +499,36 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
               <div
                 key={pageNum}
-                className="group transition-all duration-300 cursor-pointer row-span-1"
+                className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedImage(`/pdf-images/ai-portfolio-page-${pageNum}.jpg`);
                 }}
               >
-                <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50 h-full">
+                <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
                     src={`/pdf-images/ai-portfolio-page-${pageNum}.jpg`}
                     alt={`AI作品集第${pageNum}页`}
-                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             ))}
             <div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary/50 group row-span-1"
+              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
               onClick={() => window.location.href = "/ai-portfolio"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:scale-110 transition-transform duration-300">+</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多AI创意项目</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
-                <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="flex items-center justify-center h-full p-4">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
+                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
+                  <p className="text-xs text-foreground-secondary">探索更多AI创意项目</p>
+                </div>
               </div>
             </div>
           </div>
@@ -548,38 +546,36 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
               <div
                 key={pageNum}
-                className="group transition-all duration-300 cursor-pointer row-span-1"
+                className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedImage(`/pdf-images/portfolio-page-${pageNum}.jpg`);
                 }}
               >
-                <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50 h-full">
+                <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
                     src={`/pdf-images/portfolio-page-${pageNum}.jpg`}
                     alt={`策划作品集第${pageNum}页`}
-                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             ))}
             <div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary/50 group row-span-1"
+              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
               onClick={() => window.location.href = "/planning-portfolio"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:scale-110 transition-transform duration-300">+</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多策划案例</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
-                <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="flex items-center justify-center h-full p-4">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
+                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
+                  <p className="text-xs text-foreground-secondary">探索更多策划案例</p>
+                </div>
               </div>
             </div>
           </div>
@@ -601,7 +597,7 @@ export default function Home() {
             {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
               <div
                 key={pageNum}
-                className="group transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedImage(`/pdf-images/product-planning-page-${pageNum}.jpg`);
@@ -611,24 +607,22 @@ export default function Home() {
                   <img
                     src={`/pdf-images/product-planning-page-${pageNum}.jpg`}
                     alt={`产品企划第${pageNum}页`}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             ))}
             <div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary/50 group h-full"
+              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
               onClick={() => window.location.href = "/product-planning"}
             >
-              <div className="text-5xl font-bold text-primary mb-6 group-hover:scale-110 transition-transform duration-300">+</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">查看完整产品企划</h3>
-              <p className="text-foreground-secondary text-base mb-6">探索更多产品策划案例</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium">
-                <span>查看全部</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="flex items-center justify-center h-full p-4">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
+                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
+                  <p className="text-xs text-foreground-secondary">探索更多产品企划</p>
+                </div>
               </div>
             </div>
           </div>
@@ -652,7 +646,7 @@ export default function Home() {
               {
                 id: 1,
                 title: "一张笑脸圈粉800万，他的漫画有何魔力？",
-                image: "/视频封面/一张笑脸圈粉800万，他的漫画有何魔力？_哔哩哔哩_bilibili.jpg",
+                image: "/video-covers/video1.jpg",
                 platform: "bilibili",
                 views: "280万",
                 time: "2023.12"
@@ -660,7 +654,7 @@ export default function Home() {
               {
                 id: 2,
                 title: "为什么北大选课堪称'海淀赌场'？",
-                image: "/视频封面/为什么北大选课堪称“海淀赌场” ？_哔哩哔哩_bilibili.jpg",
+                image: "/video-covers/video2.jpg",
                 platform: "bilibili",
                 views: "156万",
                 time: "2023.11"
@@ -668,26 +662,26 @@ export default function Home() {
               {
                 id: 3,
                 title: "做题全靠想象力是一种怎样的体验 3.0",
-                image: "/视频封面/做题全靠想象力是一种怎样的体验 3.0_哔哩哔哩_bilibili.jpg",
+                image: "/video-covers/video3.jpg",
                 platform: "bilibili",
                 views: "420万",
                 time: "2023.10"
               },
               {
                 id: 4,
-                title: "做题全靠想象力是一种怎样的体验？",
-                image: "/视频封面/做题全靠想象力是一种怎样的体验？_哔哩哔哩_bilibili.jpg",
-                platform: "bilibili",
-                views: "580万",
-                time: "2023.09"
-              },
-              {
-                id: 5,
                 title: "围观了一场设计比烂大赛，设计师：我不做人啦！",
-                image: "/视频封面/围观了一场设计比烂大赛，设计师：我不做人啦！_哔哩哔哩_bilibili.jpg",
+                image: "/video-covers/video4.jpg",
                 platform: "bilibili",
                 views: "320万",
                 time: "2023.08"
+              },
+              {
+                id: 5,
+                title: "警告！别碰设计师的屏幕！",
+                image: "/video-covers/video5.jpg",
+                platform: "bilibili",
+                views: "580万",
+                time: "2023.09"
               }
             ].map((video) => (
               <div
@@ -721,29 +715,27 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-foreground mb-4 tracking-tight line-clamp-2 leading-relaxed">
+                <div className="p-4">
+                  <h3 className="text-base font-bold text-foreground h-12 mb-3 tracking-tight line-clamp-2 leading-relaxed">
                     {video.title}
                   </h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                          </svg>
-                        </div>
-                        <span className="text-sm font-medium text-foreground-secondary">播放量: {video.views}</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                          <svg className="w-4 h-4 text-foreground-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                          </svg>
-                        </div>
-                        <span className="text-sm font-medium text-foreground-tertiary">{video.time}</span>
+                      <span className="text-xs font-medium text-foreground-secondary">播放量: {video.views}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
+                        <svg className="w-3 h-3 text-foreground-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                       </div>
+                      <span className="text-xs font-medium text-foreground-tertiary">{video.time}</span>
                     </div>
                   </div>
                 </div>
@@ -752,17 +744,15 @@ export default function Home() {
             
             {/* 查看全部视频卡片 */}
             <div
-              className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary/50 group"
+              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
               onClick={() => window.location.href = "/video-planning"}
             >
-              <div className="text-5xl font-bold text-primary mb-6 group-hover:scale-110 transition-transform duration-300">+</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">查看全部视频</h3>
-              <p className="text-foreground-secondary text-base mb-6">探索更多视频策划案例</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium">
-                <span>查看全部</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="flex items-center justify-center h-full p-4">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
+                  <h3 className="text-base font-bold text-foreground mb-1">查看全部视频</h3>
+                  <p className="text-xs text-foreground-secondary">探索更多视频策划案例</p>
+                </div>
               </div>
             </div>
           </div>
