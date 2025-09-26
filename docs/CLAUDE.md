@@ -28,6 +28,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `nohup ./monitor_servers.sh > monitor.log 2>&1 &` - 后台启动服务器监控
 - `tail -f monitor.log` - 查看服务器监控日志
 
+### 网络和连接
+- 注意：由于网络环境限制，git pull 可能会失败，显示 "Failed to connect to github.com port 443"
+- 可以通过本地开发服务器继续工作，本地代码通常是最新的
+- 如需同步远程代码，可在网络恢复后运行 `git pull origin main`
+
 ## 项目架构
 
 ### 技术栈
@@ -233,6 +238,7 @@ public/
 - `monitor_servers.sh` - 自动监控和重启开发服务器
 - 支持主分支（端口3000）和开发分支（端口4000）的同时运行
 - 每30秒检查一次服务器状态，自动重启意外停止的服务器
+- 脚本路径配置：`/Volumes/4T 固态/personal-website-backup-20250925 2`（需要根据实际环境调整）
 
 ## 项目特色
 
@@ -300,3 +306,8 @@ npm run dev -- -p 4000  # 端口4000
 - 手动启动监控：`nohup ./monitor_servers.sh > monitor.log 2>&1 &`
 
 - 使用简体中文回答用户的所有问题
+
+### 开发环境注意事项
+- 当前工作目录：`/Volumes/003/personal-website-backup-20250925 3/personal-website`
+- 监控脚本路径可能需要根据实际环境调整（当前脚本指向 `/Volumes/4T 固态/personal-website-backup-20250925 2`）
+- 网络环境可能限制 GitHub 访问，优先使用本地开发环境

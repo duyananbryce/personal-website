@@ -59,7 +59,7 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="logo-clean w-full h-full flex items-center justify-center">
-                    <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+                    <img src="/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
                   </div>
                 </div>
                 <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>

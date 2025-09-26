@@ -52,7 +52,7 @@ export default function Home() {
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="logo-clean w-full h-full flex items-center justify-center">
-          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+          <img src="/assets/icons/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
         </div>
                 </div>
                 <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>
@@ -289,7 +289,7 @@ export default function Home() {
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
                 <div className="w-20 h-20 flex items-center justify-center mr-4">
-                  <img src="/yuanfudao-icon.svg" alt="猿辅导" className="w-full h-full object-contain" />
+                  <img src="/assets/icons/猿辅导.svg" alt="猿辅导" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">猿辅导</h3>
               </div>
@@ -303,7 +303,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
@@ -324,7 +324,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
@@ -343,7 +343,7 @@ export default function Home() {
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
                 <div className="w-20 h-20 flex items-center justify-center mr-4">
-                  <img src="/zhanco-icon.svg" alt="站酷" className="w-full h-full object-contain" />
+                  <img src="/assets/icons/站酷123.svg" alt="站酷" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">站酷网</h3>
               </div>
@@ -357,7 +357,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
@@ -378,7 +378,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
@@ -399,7 +399,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
@@ -420,7 +420,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
@@ -439,7 +439,7 @@ export default function Home() {
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
                 <div className="w-20 h-20 flex items-center justify-center mr-4">
-                  <img src="/jishisheji-icon.svg" alt="即时设计" className="w-full h-full object-contain" />
+                  <img src="/assets/icons/即时设计.svg" alt="即时设计" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">即时设计</h3>
               </div>
@@ -453,7 +453,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">新来的设计师</h4>
@@ -474,7 +474,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
+                        <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">设计练习生-乘风</h4>
@@ -510,12 +510,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/pdf-images/ai-portfolio-page-${pageNum}.jpg`);
+                  setSelectedImage(`/assets/images/ai-portfolio/page-${pageNum}.png`);
                 }}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/pdf-images/ai-portfolio-page-${pageNum}.jpg`}
+                    src={`/assets/images/ai-portfolio/page-${pageNum}.png`}
                     alt={`AI作品集第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -557,12 +557,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/pdf-images/portfolio-page-${pageNum}.jpg`);
+                  setSelectedImage(`/assets/images/planning-portfolio/page-${pageNum}.png`);
                 }}
               >
                 <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/pdf-images/portfolio-page-${pageNum}.jpg`}
+                    src={`/assets/images/planning-portfolio/page-${pageNum}.png`}
                     alt={`策划作品集第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -604,12 +604,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/pdf-images/product-planning-page-${pageNum}.jpg`);
+                  setSelectedImage(`/assets/images/product-planning/wuliuqi-plush-blindbox-page-${pageNum}.png`);
                 }}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/pdf-images/product-planning-page-${pageNum}.jpg`}
+                    src={`/assets/images/product-planning/page-${pageNum}.jpg`}
                     alt={`产品企划第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -650,7 +650,7 @@ export default function Home() {
               {
                 id: 1,
                 title: "一张笑脸圈粉800万，他的漫画有何魔力？",
-                image: "/video-covers/video1.jpg",
+                image: "/assets/images/video-planning/video1.jpg",
                 platform: "bilibili",
                 views: "280万",
                 time: "2023.12"
@@ -658,7 +658,7 @@ export default function Home() {
               {
                 id: 2,
                 title: "为什么北大选课堪称'海淀赌场'？",
-                image: "/video-covers/video2.jpg",
+                image: "/assets/images/video-planning/video2.jpg",
                 platform: "bilibili",
                 views: "156万",
                 time: "2023.11"
@@ -666,7 +666,7 @@ export default function Home() {
               {
                 id: 3,
                 title: "做题全靠想象力是一种怎样的体验 3.0",
-                image: "/video-covers/video3.jpg",
+                image: "/assets/images/video-planning/video3.jpg",
                 platform: "bilibili",
                 views: "420万",
                 time: "2023.10"
@@ -674,7 +674,7 @@ export default function Home() {
               {
                 id: 4,
                 title: "围观了一场设计比烂大赛，设计师：我不做人啦！",
-                image: "/video-covers/video4.jpg",
+                image: "/assets/images/video-planning/video4.jpg",
                 platform: "bilibili",
                 views: "320万",
                 time: "2023.08"
@@ -682,7 +682,7 @@ export default function Home() {
               {
                 id: 5,
                 title: "警告！别碰设计师的屏幕！",
-                image: "/video-covers/video5.jpg",
+                image: "/assets/images/video-planning/video5.jpg",
                 platform: "bilibili",
                 views: "580万",
                 time: "2023.09"
@@ -771,7 +771,7 @@ export default function Home() {
               <div className="flex items-center space-x-4 mb-8">
                 <div className="w-12 h-12 flex items-center justify-center shadow-lg">
                   <div className="logo-clean w-full h-full flex items-center justify-center">
-          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+          <img src="/assets/icons/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
         </div>
                 </div>
                 <span className="font-bold text-xl tracking-tight">作品集</span>

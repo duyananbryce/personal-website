@@ -49,10 +49,10 @@ def convert_pdf_pages_to_images(pdf_path, output_dir, dpi=150):
 
 if __name__ == "__main__":
     # PDF文件路径
-    pdf_path = "/Users/d1/Library/Mobile Documents/com~apple~CloudDocs/personal-website-backup-20250925 2/伍六七毛绒盲盒-1.pdf"
-    
+    pdf_path = "/Volumes/003/personal-website-backup-20250925 3/personal-website/docs/pdfs/伍六七毛绒盲盒-1.pdf"
+
     # 输出目录
-    output_dir = "/Users/d1/Library/Mobile Documents/com~apple~CloudDocs/personal-website-backup-20250925 2/public/pdf-images"
+    output_dir = "/Volumes/003/personal-website-backup-20250925 3/personal-website/public/pdf-images"
     
     if not os.path.exists(pdf_path):
         print(f"PDF文件不存在: {pdf_path}")
