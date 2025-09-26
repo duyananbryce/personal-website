@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ExternalLink, Calendar, Users, TrendingUp, Target, Lightbulb } from 'lucide-react';
-import Navigation from '@/components/Navigation';
+import { ArrowLeft, ExternalLink, Calendar, Users, TrendingUp, Target, Lightbulb } from 'lucide-react';
 
 export default function ProductPlanning() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,11 +10,8 @@ export default function ProductPlanning() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const products = [
@@ -32,7 +28,7 @@ export default function ProductPlanning() {
         satisfaction: "95%",
         markets: "全国"
       },
-      image: "/pdf-images/product-planning-page-1.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["IP衍生", "盲盒", "动画周边"]
     },
@@ -49,7 +45,7 @@ export default function ProductPlanning() {
         users: "测试中",
         features: "8个模块"
       },
-      image: "/pdf-images/product-planning-page-2.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["AI教育", "内容科技", "个性化"]
     },
@@ -66,7 +62,7 @@ export default function ProductPlanning() {
         prototype: "设计中",
         feedback: "收集中"
       },
-      image: "/pdf-images/product-planning-page-3.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["创作工具", "短视频", "AI辅助"]
     },
@@ -83,7 +79,7 @@ export default function ProductPlanning() {
         projects: "5万+",
         activity: "日活15%"
       },
-      image: "/pdf-images/product-planning-page-4.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["设计社区", "协作工具", "作品展示"]
     },
@@ -100,7 +96,7 @@ export default function ProductPlanning() {
         campaigns: "100+",
         roi: "平均300%"
       },
-      image: "/pdf-images/product-planning-page-5.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["品牌服务", "内容营销", "全案策划"]
     },
@@ -117,7 +113,7 @@ export default function ProductPlanning() {
         accuracy: "92%",
         speed: "3秒/篇"
       },
-      image: "/pdf-images/product-planning-page-6.jpg",
+      image: "/api/placeholder/400/300",
       link: "#",
       tags: ["AIGC", "内容生成", "AI平台"]
     }
@@ -137,10 +133,55 @@ export default function ProductPlanning() {
 
   return (
     <div className="min-h-screen bg-[#FAFAF5] text-[#0a0a0a]">
-      <Navigation currentPage="产品企划" />
+      {/* 顶部导航栏 */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-[#FAFAF5]/95 backdrop-blur-md shadow-sm' : 'bg-[#FAFAF5]'
+      } border-b border-[#E3D8AC]`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-[#D97758] rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">A</span>
+                </div>
+                <span className="font-bold text-lg text-[#0a0a0a]">杜亚楠的作品集</span>
+              </div>
+            </div>
+
+            {/* 导航链接 */}
+            <div className="hidden md:flex items-center space-x-8">
+              {['首页', '工作履历', 'AI作品集', '策划作品集', '账号管理', '产品企划', '视频策划'].map((item) => (
+                <a
+                  key={item}
+                  href={item === '首页' ? '/' : `/${item === '项目经理' ? 'project-manager' :
+                    item === 'AI作品集' ? 'ai-portfolio' :
+                    item === '策划作品集' ? 'planning-portfolio' :
+                    item === '账号管理' ? 'accounts' :
+                    item === '产品企划' ? 'product-planning' : 'video-planning'}`}
+                  className={`text-[#0a0a0a] hover:text-[#D97758] transition-colors duration-200 font-medium ${
+                    item === '产品企划' ? 'text-[#D97758]' : ''
+                  }`}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            {/* 返回按钮 */}
+            <a
+              href="/"
+              className="flex items-center space-x-2 text-[#0a0a0a] hover:text-[#D97758] transition-colors duration-200"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span>返回首页</span>
+            </a>
+          </div>
+        </div>
+      </nav>
 
       {/* 主要内容 */}
-      <main className="pt-20 pb-16 px-6 lg:px-8">
+      <main className="pt-24 pb-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-12">
