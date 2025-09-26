@@ -152,3 +152,4 @@ MANIFEST
 # Temporary files
 *.tmp
 *.temp
+.vercel
