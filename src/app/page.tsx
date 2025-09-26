@@ -66,7 +66,7 @@ export default function Home() {
                   key={item}
                   href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                     item === 'AI作品集' ? 'ai-portfolio' :
-                    item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
+                    item === '策划作品集' ? 'planning-portfolio' : ''}`}
                   className={`relative text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg tracking-wide ${
                     item === '首页' ? 'text-primary' : ''
                   }`}
@@ -99,7 +99,7 @@ export default function Home() {
                     key={item}
                     href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                       item === 'AI作品集' ? 'ai-portfolio' :
-                      item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
+                      item === '策划作品集' ? 'planning-portfolio' : ''}`}
                     className={`block text-foreground hover:text-primary transition-colors duration-200 font-medium text-xl py-2 ${
                       item === '首页' ? 'text-primary' : ''
                     }`}

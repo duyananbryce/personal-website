@@ -9,7 +9,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 常用命令
 
 ### 开发和构建
-- `npm run dev` - 启动开发服务器（支持热重载）
+- `npm run dev` - 启动开发服务器（默认端口3000）
+- `npm run dev -- -p 4000` - 启动开发服务器（指定端口4000）
 - `npm run build` - 构建生产版本
 - `npm run start` - 启动生产服务器
 - `npm run lint` - 运行 ESLint 检查
@@ -21,6 +22,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `python analyze_figma.py` - 解析 Figma 设计文件
 - `python convert_pdf_to_images.py` - PDF 转图片工具
 - `python extract_pdf_images.py` - PDF 图片提取工具
+
+### 服务器管理
+- `./monitor_servers.sh` - 启动服务器监控脚本（自动重启功能）
+- `nohup ./monitor_servers.sh > monitor.log 2>&1 &` - 后台启动服务器监控
+- `tail -f monitor.log` - 查看服务器监控日志
 
 ## 项目架构
 
@@ -72,7 +78,7 @@ public/
 4. **AI作品集** - AI相关的创意项目展示（网格/列表视图切换）
 5. **策划作品集** - 品牌策划和创意执行案例
 6. **产品企划** - 毛绒盲盒产品策划案例
-7. **视频策划** - 视频内容策划和制作案例（B站视频展示）
+7. **视频策划** - 视频内容策划和制作案例（B站视频展示，仅在开发分支中完整显示）
 
 ## 设计系统
 
@@ -96,6 +102,7 @@ public/
 - **正文**: Inter + 方正兰亭黑扁简体
 - **代码**: Geist Mono
 - **备用**: -apple-system, BlinkMacSystemFont
+- **注意**: Vercel部署使用Inter字体替代Geist字体以确保兼容性
 
 ### 间距和布局系统
 - 8px 基础间距单位
@@ -193,9 +200,10 @@ public/
 - 支持静态导出
 
 ### 开发环境
-- 开发服务器：`npm run dev`
+- 开发服务器：`npm run dev`（端口3000主分支，端口4000开发分支）
 - 热重载支持
 - 多源访问支持
+- 自动服务器监控和重启功能
 
 ## 重要文件说明
 
@@ -221,6 +229,11 @@ public/
 - PDF 转图片处理
 - 图片批量提取工具
 
+### 服务器管理脚本
+- `monitor_servers.sh` - 自动监控和重启开发服务器
+- 支持主分支（端口3000）和开发分支（端口4000）的同时运行
+- 每30秒检查一次服务器状态，自动重启意外停止的服务器
+
 ## 项目特色
 
 ### 内容丰富性
@@ -240,12 +253,35 @@ public/
 - 精致的交互细节
 - 专业的色彩系统
 
+## 分支管理策略
+
+### Git分支结构
+- **main分支**: 生产环境，包含稳定功能，导航栏不显示视频策划入口
+- **feature/video-planning-dev分支**: 开发环境，包含完整功能包括视频策划模块
+
+### 分支切换和开发
+```bash
+# 切换到主分支（生产环境）
+git checkout main
+npm run dev  # 端口3000
+
+# 切换到开发分支（完整功能）
+git checkout feature/video-planning-dev
+npm run dev -- -p 4000  # 端口4000
+```
+
+### 导航配置差异
+- **主分支**: 导航显示4个选项（首页、工作履历、AI作品集、策划作品集）
+- **开发分支**: 导航显示5个选项（包含视频策划）
+- **底部内容**: 两个分支都在首页底部保留视频策划模块
+
 ## 常见问题
 
 ### 字体加载
 - 确保字体文件在 `public/fonts/` 目录
 - 检查字体文件路径和格式
 - 使用 `font-display: swap` 优化加载
+- Vercel部署使用Inter字体确保兼容性
 
 ### 图片显示
 - 检查 `public/` 目录结构
@@ -256,5 +292,11 @@ public/
 - 优先使用 CSS 变量
 - 遵循 Tailwind CSS 类名规范
 - 注意响应式断点设置
+
+### 服务器管理
+- 使用 `monitor_servers.sh` 脚本保持服务器持续运行
+- 检查端口占用：`lsof -ti:3000` 和 `lsof -ti:4000`
+- 查看监控日志：`tail -f monitor.log`
+- 手动启动监控：`nohup ./monitor_servers.sh > monitor.log 2>&1 &`
 
 - 使用简体中文回答用户的所有问题
