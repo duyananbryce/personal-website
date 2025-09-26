@@ -29,7 +29,7 @@ export default function ProductPlanning() {
         satisfaction: "95%",
         markets: "全国"
       },
-      image: "/assets/images/product-planning/page-1.jpg",
+      image: "/assets/images/product-planning/page-1.png",
       link: "#",
       tags: ["IP衍生", "盲盒", "动画周边"]
     },
@@ -46,7 +46,7 @@ export default function ProductPlanning() {
         users: "测试中",
         features: "8个模块"
       },
-      image: "/assets/images/product-planning/page-2.jpg",
+      image: "/assets/images/product-planning/page-2.png",
       link: "#",
       tags: ["AI教育", "内容科技", "个性化"]
     },
@@ -63,7 +63,7 @@ export default function ProductPlanning() {
         prototype: "设计中",
         feedback: "收集中"
       },
-      image: "/assets/images/product-planning/page-3.jpg",
+      image: "/assets/images/product-planning/page-3.png",
       link: "#",
       tags: ["创作工具", "短视频", "AI辅助"]
     },
@@ -80,7 +80,7 @@ export default function ProductPlanning() {
         projects: "5万+",
         activity: "日活15%"
       },
-      image: "/assets/images/product-planning/page-4.jpg",
+      image: "/assets/images/product-planning/page-4.png",
       link: "#",
       tags: ["设计社区", "协作工具", "作品展示"]
     },
@@ -97,7 +97,7 @@ export default function ProductPlanning() {
         campaigns: "100+",
         roi: "平均300%"
       },
-      image: "/assets/images/product-planning/page-5.jpg",
+      image: "/assets/images/product-planning/page-5.png",
       link: "#",
       tags: ["品牌服务", "内容营销", "全案策划"]
     },
@@ -114,7 +114,7 @@ export default function ProductPlanning() {
         accuracy: "92%",
         speed: "3秒/篇"
       },
-      image: "/assets/images/product-planning/page-6.jpg",
+      image: "/assets/images/product-planning/page-6.png",
       link: "#",
       tags: ["AIGC", "内容生成", "AI平台"]
     }

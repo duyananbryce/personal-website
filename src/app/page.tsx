@@ -604,12 +604,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/assets/images/product-planning/wuliuqi-plush-blindbox-page-${pageNum}.png`);
+                  setSelectedImage(`/assets/images/product-planning/page-${pageNum}.png`);
                 }}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/assets/images/product-planning/page-${pageNum}.jpg`}
+                    src={`/assets/images/product-planning/page-${pageNum}.png`}
                     alt={`产品企划第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
