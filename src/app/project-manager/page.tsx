@@ -21,59 +21,60 @@ export default function ProjectManager() {
   const projects = [
     {
       id: 1,
-      company: "啊哈娱乐 (Aha Entertainment)",
-      position: "内容策划经理",
-      period: "2020.03 - 2021.08",
+      company: "啊哈娱乐",
+      position: "市场营销经理",
+      period: "2024.10 - 至今",
       location: "北京",
-      description: "负责短视频内容策划与制作管理",
+      description: "负责啊哈娱乐旗下《伍六七》IP的市场营销工作，包含《伍六七》动画第五季的市场营销工作、以及音乐巡演、手游、衍生品等市场推广。",
       achievements: [
-        "策划制作短视频内容累计获得9000万+播放量",
-        "管理内容团队，提升内容质量和传播效果",
-        "与平台合作，优化内容分发策略"
+        "制定《伍六七》动画第五季开播的市场营销方案，并跟进落地执行",
+        "负责伍六七手游《伍六七：暗影交锋》的首曝活动推广方案，确保首曝期间各平台的物料按时制作并上线，助力手游 TAPTAP 预约超 170 万",
+        "负责伍六七 2024 音乐巡演的线上营销规划方案、VJ 视频监制，以及巡演纪录片的拍摄跟进，确保四场巡演在各平台的传播热度，场均票务售罄时间 2.5 天",
+        "负责《伍六七》周边衍生品的营销企划以及视觉创意",
+        "负责《伍六七》2025 音乐巡演 VJ 视觉监制"
       ],
-      highlights: ["9000万+播放量", "团队管理", "平台合作"]
+      highlights: ["IP营销", "动画推广", "音乐巡演", "手游推广", "衍生品"]
     },
     {
       id: 2,
-      company: "猿辅导 (Yuanfudao)",
-      position: "营销策划专员",
-      period: "2019.06 - 2020.02",
+      company: "猿辅导在线教育",
+      position: "视频编导",
+      period: "2022.12 - 2024.10",
       location: "北京",
-      description: "负责教育产品营销策划与品牌推广",
+      description: "负责猿辅导电商直播的短视频生产工作，包括脚本创作、拍摄、剪辑等；参与信息流短视频投放工作，负责千川、随心推的推广计划搭建；负责电商直播间的搭建、日常维护，以及户外直播活动的支持。",
       achievements: [
-        "策划多场成功的品牌营销活动",
-        "负责社交媒体内容策略制定",
-        "协助品牌知名度提升和用户增长"
+        "负责猿辅导小学部图书相关的信息流视频制作，包含脚本、拍摄、剪辑、投放等流程",
+        "负责电商直播部门的相关直播间搭建，参与直播间搭建全流程，保障日常直播的顺利进行"
       ],
-      highlights: ["品牌营销", "社交媒体", "用户增长"]
+      highlights: ["视频制作", "直播运营", "信息流投放", "脚本创作"]
     },
     {
       id: 3,
-      company: "站酷网 (Zcool)",
-      position: "视频内容策划",
-      period: "2018.09 - 2019.05",
+      company: "站酷网",
+      position: "抖音短视频运营",
+      period: "2021.8 - 2022.12",
       location: "北京",
-      description: "负责创意设计平台的视频内容策划",
+      description: "从零到一搭建新媒体视频矩阵，负责站酷网官方抖音、B站、小红书账号的视频运营；为公司相关活动提供内容创意，提升活动效果。",
       achievements: [
-        "策划制作设计师访谈系列视频",
-        "与知名品牌合作推广设计理念",
-        "提升平台用户粘性和活跃度"
+        "独立负责账号选题、文案、分镜、配音以及视频后期监制，从0到1运营，账号A抖音、B站累计涨粉7万+，播放2100万；账号B涨粉7万，累计播放800万",
+        "小红书渠道累计发布视频49条，播放：158万，涨粉1万+，单条视频最高播放量：55万，7.5万点赞",
+        "为公司重大节点的品牌活动宣发，提供内容策划和传播策略支持"
       ],
-      highlights: ["品牌合作", "设计师访谈", "用户增长"]
+      highlights: ["账号运营", "内容策划", "视频制作", "品牌传播"]
     },
     {
       id: 4,
-      company: "个人项目",
-      position: "内容创作者",
-      period: "2017.06 - 至今",
+      company: "猿辅导在线教育",
+      position: "内容运营",
+      period: "2020.6 - 2021.8",
       location: "北京",
-      description: "个人抖音账号运营与内容创作",
+      description: "独立负责小猿搜题APP抖音、B站官方账号的内容更新和账号运营；负责小猿搜题社区多个栏目的内容制作；在重大活动节点策划品牌内容活动和落地执行。",
       achievements: [
-        "个人抖音账号粉丝增长至100万+",
-        "创作多个爆款视频内容",
-        "探索短视频内容创新形式"
+        "视频内容策划：2021年1月开始，负责小猿搜题APP抖音账号运营，独立完成脚本、配音、剪辑等工作，0成本推动账号数据增长。运营期间累计涨粉25w，新增播放9000w+",
+        "文字内容策划：担任科普、数据调查、学习技巧等等多个栏目的内容主笔，每周产出 3-5 篇优质文章，多篇内容成为爆款",
+        "品牌内容推广：在重大活动节点参与的市场营销方案的策划与落地执行"
       ],
-      highlights: ["100万+粉丝", "爆款内容", "创新形式"]
+      highlights: ["账号运营", "内容创作", "爆款策划", "品牌推广"]
     }
   ];
 
@@ -86,7 +87,7 @@ export default function ProjectManager() {
         <div className="max-w-4xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-foreground mb-6">项目经理</h1>
+            <h1 className="text-5xl font-bold text-foreground mb-6">工作履历</h1>
             <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
               专业的内容策划与项目管理经验，致力于打造优质内容与品牌价值
             </p>
@@ -105,18 +106,18 @@ export default function ProjectManager() {
                 {/* 项目卡片 */}
                 <div className="ml-16">
                   <div className="bg-surface p-8 rounded-2xl shadow-sm border border-gray-300">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                      <div className="flex-1">
                         <h3 className="text-2xl font-bold text-foreground mb-2">{project.company}</h3>
                         <p className="text-lg text-primary font-medium">{project.position}</p>
                       </div>
-                      <div className="flex items-center space-x-4 text-sm text-foreground-secondary">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
+                      <div className="flex items-center space-x-4 text-2xl text-foreground-secondary mt-2 md:mt-0">
+                        <div className="flex items-center space-x-2">
+                          <Calendar className="w-5 h-5" />
                           <span>{project.period}</span>
                         </div>
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="w-4 h-4" />
+                        <div className="flex items-center space-x-2">
+                          <MapPin className="w-5 h-5" />
                           <span>{project.location}</span>
                         </div>
                       </div>
@@ -127,7 +128,7 @@ export default function ProjectManager() {
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-foreground mb-3">主要成就：</h4>
+                      <h4 className="font-semibold text-foreground mb-3">工作成果：</h4>
                       <ul className="space-y-2">
                         {project.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-2">

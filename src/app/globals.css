@@ -299,3 +299,96 @@ h1, h2, h3, h4, h5, h6 {
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Logo样式 - 透明背景无阴影 */
+.logo-clean {
+  background: transparent !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+
+.logo-clean img {
+  background: transparent !important;
+  filter: brightness(1) contrast(1) !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* 更激进的logo处理 - 裁剪阴影 */
+.logo-aggressive {
+  background: transparent !important;
+  clip-path: inset(0 0 0 0) !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  transform: scale(1) !important;
+}
+
+.logo-aggressive img {
+  background: transparent !important;
+  clip-path: inset(0 0 0 0) !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  transform: scale(1) !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* 最激进的logo处理 - 使用mask完全移除阴影 */
+.logo-mask {
+  background: transparent !important;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%) !important;
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%) !important;
+  filter: 
+    brightness(1) 
+    contrast(1.2) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.logo-mask img {
+  background: transparent !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1.2) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  transform: scale(0.9) !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}

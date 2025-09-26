@@ -50,10 +50,12 @@ export default function Home() {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <span className="text-white font-bold text-2xl">A</span>
+                <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="logo-clean w-full h-full flex items-center justify-center">
+          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+        </div>
                 </div>
-                <span className="font-bold text-2xl text-foreground tracking-tight">杜亚楠的作品集</span>
+                <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>
               </div>
             </div>
 
@@ -183,12 +185,12 @@ export default function Home() {
       </section>
 
       {/* 工作履历时间轴 - 精致分隔与文本层次 */}
-      <section className="py-20 px-6 lg:px-8 border-t border-border bg-surface">
+      <section className="py-12 px-6 lg:px-8 border-t border-border bg-surface">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">工作履历</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold text-foreground mb-4 tracking-tight">工作履历</h2>
+            <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-6"></div>
+            <p className="text-lg text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
               专业的内容策划与项目管理经验，在不同领域积累了丰富的工作成果
             </p>
           </div>
@@ -284,8 +286,8 @@ export default function Home() {
             {/* 猿辅导 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-white font-bold text-xl">猿</span>
+                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                  <img src="/yuanfudao-icon.svg" alt="猿辅导" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">猿辅导</h3>
               </div>
@@ -298,8 +300,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">抖</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
@@ -319,8 +321,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">B</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
@@ -338,8 +340,8 @@ export default function Home() {
             {/* 站酷网 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-white font-bold text-xl">站</span>
+                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                  <img src="/zhanco-icon.svg" alt="站酷" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">站酷网</h3>
               </div>
@@ -352,8 +354,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">抖</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
@@ -373,8 +375,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">B</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
@@ -394,8 +396,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">抖</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
@@ -415,8 +417,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">B</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
@@ -434,8 +436,8 @@ export default function Home() {
             {/* 即时设计 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-white font-bold text-xl">即</span>
+                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                  <img src="/jishisheji-icon.svg" alt="即时设计" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">即时设计</h3>
               </div>
@@ -448,8 +450,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">B</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">新来的设计师</h4>
@@ -469,8 +471,8 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">B</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <img src="/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">设计练习生-乘风</h4>
@@ -765,10 +767,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-4 gap-16">
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">A</span>
+                <div className="w-12 h-12 flex items-center justify-center shadow-lg">
+                  <div className="logo-clean w-full h-full flex items-center justify-center">
+          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+        </div>
                 </div>
-                <span className="font-bold text-xl tracking-tight">杜亚楠的作品集</span>
+                <span className="font-bold text-xl tracking-tight">作品集</span>
               </div>
               <p className="text-white/80 text-lg leading-relaxed">
                 专注于内容策划、品牌营销和视频制作，致力于通过优质内容创造品牌价值。
@@ -806,7 +810,7 @@ export default function Home() {
 
           <div className="border-t border-white/20 mt-16 pt-16 text-center">
             <p className="text-white/70 text-lg">
-              © 2024 杜亚楠的作品集. 保留所有权利.
+              © 2024 作品集. 保留所有权利.
             </p>
           </div>
         </div>

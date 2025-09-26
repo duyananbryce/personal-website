@@ -57,10 +57,12 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
           {/* Logo区域 */}
           <div className="flex items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <div className="logo-aggressive w-full h-full flex items-center justify-center">
+          <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+        </div>
               </div>
-              <span className="font-bold text-xl text-foreground">杜亚楠的作品集</span>
+              <span className="font-bold text-xl text-foreground">作品集</span>
             </div>
           </div>
 
