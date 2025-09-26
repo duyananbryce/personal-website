@@ -68,7 +68,7 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
 
             {/* 桌面端导航 */}
             <div className="hidden lg:flex items-center space-x-12">
-              {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
+              {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
                 <a
                   key={item}
                   href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
@@ -101,7 +101,7 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
           {isMobileMenuOpen && (
             <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
               <div className="px-6 py-8 space-y-6">
-                {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
+                {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
                   <a
                     key={item}
                     href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
