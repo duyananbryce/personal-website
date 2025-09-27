@@ -36,7 +36,7 @@ export default function AIPortfolio() {
       <Navigation currentPage="AI作品集" />
 
       {/* 主要内容 */}
-      <main className="pt-24 pb-16">
+      <main className="pt-64 pb-16">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* 页面标题 */}
           <div className="text-center mb-12">

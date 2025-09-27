@@ -288,7 +288,7 @@ export default function Home() {
             {/* 猿辅导 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                <div className="w-14 h-14 flex items-center justify-center mr-4">
                   <img src="/assets/icons/猿辅导.svg" alt="猿辅导" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">猿辅导</h3>
@@ -342,7 +342,7 @@ export default function Home() {
             {/* 站酷网 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                <div className="w-14 h-14 flex items-center justify-center mr-4">
                   <img src="/assets/icons/站酷123.svg" alt="站酷" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">站酷网</h3>
@@ -438,7 +438,7 @@ export default function Home() {
             {/* 即时设计 - 精致卡片 */}
             <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
               <div className="flex items-center mb-8">
-                <div className="w-20 h-20 flex items-center justify-center mr-4">
+                <div className="w-14 h-14 flex items-center justify-center mr-4">
                   <img src="/assets/icons/即时设计.svg" alt="即时设计" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground tracking-tight">即时设计</h3>

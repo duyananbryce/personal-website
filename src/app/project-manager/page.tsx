@@ -83,7 +83,7 @@ export default function ProjectManager() {
       <Navigation currentPage="工作履历" />
 
       {/* 主要内容 */}
-      <main className="pt-24 pb-16 px-6 lg:px-8">
+      <main className="pt-64 pb-16 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* 页面标题 */}
           <div className="text-center mb-16">
