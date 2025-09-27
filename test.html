@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单测试页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-box {
+            background: #FAF9F5;
+            color: #141413;
+            border: 2px solid #D97706;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success {
+            background: #10B981;
+            color: white;
+        }
+        .error {
+            background: #EF4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 网站样式测试页面</h1>
+
+    <div class="test-box">
+        <h2>基础样式测试</h2>
+        <p>如果您能看到这个盒子有背景色、边框和圆角，说明CSS样式正常工作。</p>
+    </div>
+
+    <div class="test-box success">
+        <h2>成功样式测试</h2>
+        <p>绿色盒子表示样式系统正常</p>
+    </div>
+
+    <div class="test-box error">
+        <h2>错误样式测试</h2>
+        <p>红色盒子也表示样式系统正常</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h2>原始网站链接测试：</h2>
+        <a href="/index.html" style="display: block; margin: 10px 0; padding: 10px; background: #D97706; color: white; text-decoration: none; border-radius: 4px;">访问原始网站首页</a>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h2>浏览器信息：</h2>
+        <div id="browser-info"></div>
+    </div>
+
+    <script>
+        // 显示浏览器信息
+        document.getElementById('browser-info').innerHTML = `
+            <p><strong>用户代理：</strong> ${navigator.userAgent}</p>
+            <p><strong>当前时间：</strong> ${new Date().toLocaleString()}</p>
+            <p><strong>屏幕分辨率：</strong> ${screen.width}x${screen.height}</p>
+        `;
+
+        // 测试CSS变量支持
+        const rootStyles = getComputedStyle(document.documentElement);
+        console.log('CSS变量测试:', {
+            '--background': rootStyles.getPropertyValue('--background'),
+            '--foreground': rootStyles.getPropertyValue('--foreground'),
+            '--primary': rootStyles.getPropertyValue('--primary')
+        });
+    </script>
+</body>
+</html>

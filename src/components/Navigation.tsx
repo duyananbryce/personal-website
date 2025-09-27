@@ -30,40 +30,42 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 滚动事件监听：实现导航栏背景效果
+  // 处理组件挂载和滚动状态
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10); // 滚动超过10px时显示背景
     };
-    
+
     // 服务器端渲染兼容性检查
     if (typeof window !== 'undefined') {
+      // 立即检查滚动位置
+      handleScroll();
+
+      // 添加滚动事件监听
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, []);
 
   // 导航菜单项配置
-  const navItems = ['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'];
+  const navItems = ['首页', '工作履历', 'AI作品集', '策划作品集'];
 
   return (
     <>
       {/* 顶部导航栏 - 现代简约主义透明背景 */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm border-b border-border-light' : 'bg-transparent'
-      }`}>
+      <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-background/90 backdrop-blur-md shadow-sm border-b border-border-light">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="flex items-center space-x-4">
+              <a href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-200">
                 <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="logo-clean w-full h-full flex items-center justify-center">
-                    <img src="/logo.png" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
+                    <img src="/assets/icons/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
                   </div>
                 </div>
                 <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>
-              </div>
+              </a>
             </div>
 
             {/* 桌面端导航 */}
@@ -73,7 +75,8 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
                   key={item}
                   href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                     item === 'AI作品集' ? 'ai-portfolio' :
-                    item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
+                    item === '策划作品集' ? 'planning-portfolio' : 
+                    item === '视频策划' ? 'video-planning' : ''}`}
                   className={`relative text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg tracking-wide ${
                     item === currentPage ? 'text-primary' : ''
                   }`}
@@ -106,7 +109,8 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
                     key={item}
                     href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                       item === 'AI作品集' ? 'ai-portfolio' :
-                      item === '策划作品集' ? 'planning-portfolio' : 'video-planning'}`}
+                      item === '策划作品集' ? 'planning-portfolio' : 
+                      item === '视频策划' ? 'video-planning' : ''}`}
                     className={`relative block text-foreground hover:text-primary transition-colors duration-200 font-medium text-xl py-2 ${
                       item === currentPage ? 'text-primary' : ''
                     }`}

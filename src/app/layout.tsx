@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "杜亚楠 - 内容策划师 (开发版)",
-  description: "专业内容策划师，15亿+视频播放量，1000万+粉丝管理经验 - 开发分支",
+  title: "杜亚楠 - 内容策划师",
+  description: "专业内容策划师，15亿+视频播放量，1000万+粉丝管理经验",
   icons: {
     icon: [
       { url: "/logo.svg", type: "image/svg+xml" },

@@ -19,26 +19,26 @@ export default function PlanningPortfolio() {
 
   // 策划作品集页面数据
   const portfolioPages = [
-    { id: 1, image: "/planning-portfolio/page-1.png", title: "策划作品集 - 第1页" },
-    { id: 2, image: "/planning-portfolio/page-2.png", title: "策划作品集 - 第2页" },
-    { id: 3, image: "/planning-portfolio/page-3.png", title: "策划作品集 - 第3页" },
-    { id: 4, image: "/planning-portfolio/page-4.png", title: "策划作品集 - 第4页" },
-    { id: 5, image: "/planning-portfolio/page-5.png", title: "策划作品集 - 第5页" },
-    { id: 6, image: "/planning-portfolio/page-6.png", title: "策划作品集 - 第6页" },
-    { id: 7, image: "/planning-portfolio/page-7.png", title: "策划作品集 - 第7页" },
-    { id: 8, image: "/planning-portfolio/page-8.png", title: "策划作品集 - 第8页" },
-    { id: 9, image: "/planning-portfolio/page-9.png", title: "策划作品集 - 第9页" },
-    { id: 10, image: "/planning-portfolio/page-10.png", title: "策划作品集 - 第10页" },
-    { id: 11, image: "/planning-portfolio/page-11.png", title: "策划作品集 - 第11页" },
-    { id: 12, image: "/planning-portfolio/page-12.png", title: "策划作品集 - 第12页" },
-    { id: 13, image: "/planning-portfolio/page-13.png", title: "策划作品集 - 第13页" },
-    { id: 14, image: "/planning-portfolio/page-14.png", title: "策划作品集 - 第14页" },
-    { id: 15, image: "/planning-portfolio/page-15.png", title: "策划作品集 - 第15页" },
-    { id: 16, image: "/planning-portfolio/page-16.png", title: "策划作品集 - 第16页" },
-    { id: 17, image: "/planning-portfolio/page-17.png", title: "策划作品集 - 第17页" },
-    { id: 18, image: "/planning-portfolio/page-18.png", title: "策划作品集 - 第18页" },
-    { id: 19, image: "/planning-portfolio/page-19.png", title: "策划作品集 - 第19页" },
-    { id: 20, image: "/planning-portfolio/page-20.png", title: "策划作品集 - 第20页" },
+    { id: 1, image: "/assets/images/planning-portfolio/page-1.webp", title: "策划作品集 - 第1页" },
+    { id: 2, image: "/assets/images/planning-portfolio/page-2.webp", title: "策划作品集 - 第2页" },
+    { id: 3, image: "/assets/images/planning-portfolio/page-3.webp", title: "策划作品集 - 第3页" },
+    { id: 4, image: "/assets/images/planning-portfolio/page-4.webp", title: "策划作品集 - 第4页" },
+    { id: 5, image: "/assets/images/planning-portfolio/page-5.webp", title: "策划作品集 - 第5页" },
+    { id: 6, image: "/assets/images/planning-portfolio/page-6.webp", title: "策划作品集 - 第6页" },
+    { id: 7, image: "/assets/images/planning-portfolio/page-7.webp", title: "策划作品集 - 第7页" },
+    { id: 8, image: "/assets/images/planning-portfolio/page-8.webp", title: "策划作品集 - 第8页" },
+    { id: 9, image: "/assets/images/planning-portfolio/page-9.webp", title: "策划作品集 - 第9页" },
+    { id: 10, image: "/assets/images/planning-portfolio/page-10.webp", title: "策划作品集 - 第10页" },
+    { id: 11, image: "/assets/images/planning-portfolio/page-11.webp", title: "策划作品集 - 第11页" },
+    { id: 12, image: "/assets/images/planning-portfolio/page-12.webp", title: "策划作品集 - 第12页" },
+    { id: 13, image: "/assets/images/planning-portfolio/page-13.webp", title: "策划作品集 - 第13页" },
+    { id: 14, image: "/assets/images/planning-portfolio/page-14.webp", title: "策划作品集 - 第14页" },
+    { id: 15, image: "/assets/images/planning-portfolio/page-15.webp", title: "策划作品集 - 第15页" },
+    { id: 16, image: "/assets/images/planning-portfolio/page-16.webp", title: "策划作品集 - 第16页" },
+    { id: 17, image: "/assets/images/planning-portfolio/page-17.webp", title: "策划作品集 - 第17页" },
+    { id: 18, image: "/assets/images/planning-portfolio/page-18.webp", title: "策划作品集 - 第18页" },
+    { id: 19, image: "/assets/images/planning-portfolio/page-19.webp", title: "策划作品集 - 第19页" },
+    { id: 20, image: "/assets/images/planning-portfolio/page-20.webp", title: "策划作品集 - 第20页" },
   ];
 
   return (
@@ -46,7 +46,7 @@ export default function PlanningPortfolio() {
       <Navigation currentPage="策划作品集" />
 
       {/* 主要内容 */}
-      <main className="pt-24 pb-16">
+      <main className="pt-64 pb-16">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* 页面标题 */}
           <div className="text-center mb-12">
@@ -56,31 +56,7 @@ export default function PlanningPortfolio() {
             </p>
           </div>
 
-          {/* 作品集介绍 */}
-          <div className="bg-primary/5 p-8 rounded-2xl mb-12 border border-primary/20">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">内容策划作品集</h2>
-              <p className="text-foreground-secondary leading-relaxed mb-6">
-                本作品集收录了我在内容策划领域的代表性项目，包括品牌营销策划、视频内容制作、
-                社交媒体运营等方面的成果。每个项目都体现了专业的策划能力和创新思维。
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-                  品牌策划
-                </span>
-                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-                  内容营销
-                </span>
-                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-                  视频制作
-                </span>
-                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-                  社交媒体
-                </span>
-              </div>
-            </div>
-          </div>
-
+  
           {/* 页面展示区域 */}
           <div className="flex flex-col items-center">
             {portfolioPages.map((page, index) => (

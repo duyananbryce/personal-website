@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Calendar, Users, TrendingUp, Target, Lightbulb } from 'lucide-react';
 
 export default function ProductPlanning() {
@@ -28,7 +29,7 @@ export default function ProductPlanning() {
         satisfaction: "95%",
         markets: "全国"
       },
-      image: "/pdf-images/product-planning-page-1.jpg",
+      image: "/assets/images/product-planning/page-1.png",
       link: "#",
       tags: ["IP衍生", "盲盒", "动画周边"]
     },
@@ -45,7 +46,7 @@ export default function ProductPlanning() {
         users: "测试中",
         features: "8个模块"
       },
-      image: "/pdf-images/product-planning-page-2.jpg",
+      image: "/assets/images/product-planning/page-2.png",
       link: "#",
       tags: ["AI教育", "内容科技", "个性化"]
     },
@@ -62,7 +63,7 @@ export default function ProductPlanning() {
         prototype: "设计中",
         feedback: "收集中"
       },
-      image: "/pdf-images/product-planning-page-3.jpg",
+      image: "/assets/images/product-planning/page-3.png",
       link: "#",
       tags: ["创作工具", "短视频", "AI辅助"]
     },
@@ -79,7 +80,7 @@ export default function ProductPlanning() {
         projects: "5万+",
         activity: "日活15%"
       },
-      image: "/pdf-images/product-planning-page-4.jpg",
+      image: "/assets/images/product-planning/page-4.png",
       link: "#",
       tags: ["设计社区", "协作工具", "作品展示"]
     },
@@ -96,7 +97,7 @@ export default function ProductPlanning() {
         campaigns: "100+",
         roi: "平均300%"
       },
-      image: "/pdf-images/product-planning-page-5.jpg",
+      image: "/assets/images/product-planning/page-5.png",
       link: "#",
       tags: ["品牌服务", "内容营销", "全案策划"]
     },
@@ -113,7 +114,7 @@ export default function ProductPlanning() {
         accuracy: "92%",
         speed: "3秒/篇"
       },
-      image: "/pdf-images/product-planning-page-6.jpg",
+      image: "/assets/images/product-planning/page-6.png",
       link: "#",
       tags: ["AIGC", "内容生成", "AI平台"]
     }
@@ -167,13 +168,13 @@ export default function ProductPlanning() {
             </div>
 
             {/* 返回按钮 */}
-            <a
+            <Link
               href="/"
               className="flex items-center space-x-2 text-[#0a0a0a] hover:text-[#D97758] transition-colors duration-200"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>返回首页</span>
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

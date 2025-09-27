@@ -19,16 +19,16 @@ export default function AIPortfolio() {
 
   // AI作品集页面数据
   const portfolioPages = [
-    { id: 1, image: "/ai-portfolio/page-1.png", title: "AI创意作品集 - 第1页" },
-    { id: 2, image: "/ai-portfolio/page-2.png", title: "AI创意作品集 - 第2页" },
-    { id: 3, image: "/ai-portfolio/page-3.png", title: "AI创意作品集 - 第3页" },
-    { id: 4, image: "/ai-portfolio/page-4.png", title: "AI创意作品集 - 第4页" },
-    { id: 5, image: "/ai-portfolio/page-5.png", title: "AI创意作品集 - 第5页" },
-    { id: 6, image: "/ai-portfolio/page-6.png", title: "AI创意作品集 - 第6页" },
-    { id: 7, image: "/ai-portfolio/page-7.png", title: "AI创意作品集 - 第7页" },
-    { id: 8, image: "/ai-portfolio/page-8.png", title: "AI创意作品集 - 第8页" },
-    { id: 9, image: "/ai-portfolio/page-9.png", title: "AI创意作品集 - 第9页" },
-    { id: 10, image: "/ai-portfolio/page-10.png", title: "AI创意作品集 - 第10页" },
+    { id: 1, image: "/assets/images/ai-portfolio/page-1.webp", title: "AI创意作品集 - 第1页" },
+    { id: 2, image: "/assets/images/ai-portfolio/page-2.webp", title: "AI创意作品集 - 第2页" },
+    { id: 3, image: "/assets/images/ai-portfolio/page-3.webp", title: "AI创意作品集 - 第3页" },
+    { id: 4, image: "/assets/images/ai-portfolio/page-4.webp", title: "AI创意作品集 - 第4页" },
+    { id: 5, image: "/assets/images/ai-portfolio/page-5.webp", title: "AI创意作品集 - 第5页" },
+    { id: 6, image: "/assets/images/ai-portfolio/page-6.webp", title: "AI创意作品集 - 第6页" },
+    { id: 7, image: "/assets/images/ai-portfolio/page-7.webp", title: "AI创意作品集 - 第7页" },
+    { id: 8, image: "/assets/images/ai-portfolio/page-8.webp", title: "AI创意作品集 - 第8页" },
+    { id: 9, image: "/assets/images/ai-portfolio/page-9.webp", title: "AI创意作品集 - 第9页" },
+    { id: 10, image: "/assets/images/ai-portfolio/page-10.webp", title: "AI创意作品集 - 第10页" },
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function AIPortfolio() {
       <Navigation currentPage="AI作品集" />
 
       {/* 主要内容 */}
-      <main className="pt-24 pb-16">
+      <main className="pt-64 pb-16">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* 页面标题 */}
           <div className="text-center mb-12">

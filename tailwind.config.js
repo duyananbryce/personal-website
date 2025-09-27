@@ -8,38 +8,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // 主色调 - 焦糖珊瑚色系
-        primary: '#D97757',
-        'primary-light': '#E59980',
-        'primary-dark': '#B85A3D',
-
-        // 基础色彩 - 现代简约主义暖色调
-        background: '#FAF9F5',
-        foreground: '#141413',
-        'foreground-secondary': '#5E5D59',
-        surface: '#FFFFFF',
-        border: '#E8E6DC',
-
-        // 其他颜色
-        'border-light': '#E8E6DC',
+        // 使用CSS变量定义的颜色
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        "foreground-secondary": "var(--foreground-secondary)",
+        "foreground-tertiary": "var(--foreground-tertiary)",
+        surface: "var(--surface)",
+        "surface-dark": "var(--surface-dark)",
+        border: "var(--border)",
+        "border-light": "var(--border-light)",
+        "border-dark": "var(--border-dark)",
+        primary: "var(--primary)",
+        "primary-light": "var(--primary-light)",
+        "primary-dark": "var(--primary-dark)",
+        "primary-subtle": "var(--primary-subtle)",
+        accent: "var(--accent)",
+        "accent-light": "var(--accent-light)",
+        "accent-dark": "var(--accent-dark)",
       },
       fontFamily: {
-        geist: ['var(--font-geist)', 'sans-serif'],
-        'geist-mono': ['var(--font-geist-mono)', 'monospace'],
+        sans: ["var(--font-body)"],
+        serif: ["var(--font-heading)"],
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        'pulse-glow': {
-          '0%': { boxShadow: '0 0 5px rgba(217, 119, 87, 0.3)' },
-          '100%': { boxShadow: '0 0 20px rgba(217, 119, 87, 0.6)' },
-        },
+      boxShadow: {
+        'primary': '0 0 20px rgba(217, 119, 87, 0.15)',
       },
     },
   },

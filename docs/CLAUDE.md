@@ -14,7 +14,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - 构建生产版本
 - `npm run start` - 启动生产服务器
 - `npm run lint` - 运行 ESLint 检查
-- `npm run check-tailwind` - 检查 Tailwind CSS 版本
 
 ### 测试
 目前没有配置测试命令。
@@ -25,10 +24,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `python extract_pdf_images.py` - PDF 图片提取工具
 
 ### 服务器管理
-- `nohup npm run dev > dev-server.log 2>&1 &` - 后台启动开发服务器
-- `tail -f dev-server.log` - 查看服务器日志
-- `lsof -ti:3000` - 检查端口3000占用情况
-- `kill -9 <PID>` - 停止指定进程
+- `./monitor_servers.sh` - 启动服务器监控脚本（自动重启功能）
+- `nohup ./monitor_servers.sh > monitor.log 2>&1 &` - 后台启动服务器监控
+- `tail -f monitor.log` - 查看服务器监控日志
 
 ### 网络和连接
 - 注意：由于网络环境限制，git pull 可能会失败，显示 "Failed to connect to github.com port 443"
@@ -42,14 +40,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **语言**: TypeScript
 - **样式**: Tailwind CSS v4 (使用 CSS 变量主题系统)
 - **UI组件**: Lucide React
-- **字体**:
+- **字体**: 
   - 西文：Styrene A (Anthropic 官方字体) + Inter
   - 中文：方正兰亭特黑扁简体 + 方正兰亭黑扁简体
   - 辅助：Space Grotesk
-- **动画**: Framer Motion 12.23.21 + 内置 CSS 动画系统
+- **动画**: 内置 CSS 动画系统
 - **构建工具**: Vercel
-- **图片处理**: @aws-sdk/client-s3 (S3集成)
-- **设计工具**: figma-js (Figma集成)
 
 ### 目录结构
 ```
@@ -124,7 +120,6 @@ public/
 - 主色调阴影：`--shadow-primary: 0 0 20px rgba(217, 119, 87, 0.15)`
 
 ### 动画系统
-- Framer Motion 动画库
 - `animate-float`: 浮动动画
 - `animate-pulse-glow`: 脉冲发光效果
 - 过渡动画：`transition-all duration-300`
@@ -144,8 +139,8 @@ public/
 
 ### 卡片组件模式
 ```tsx
-<div className="bg-surface border border-border rounded-2xl p-6
-            hover:shadow-lg transition-all duration-300
+<div className="bg-surface border border-border rounded-2xl p-6 
+            hover:shadow-lg transition-all duration-300 
             hover:border-primary/30">
   {/* 内容 */}
 </div>
@@ -153,7 +148,7 @@ public/
 
 ### 按钮组件模式
 ```tsx
-<button className="px-4 py-2 bg-primary text-white rounded-lg
+<button className="px-4 py-2 bg-primary text-white rounded-lg 
                 hover:bg-primary-dark transition-colors duration-200">
   按钮文字
 </button>
@@ -215,10 +210,6 @@ public/
 - 多源访问支持
 - 自动服务器监控和重启功能
 
-### Next.js 配置注意
-- `next.config.js` 中的 `allowedDevOrigins` 选项在当前 Next.js 版本中可能不被支持
-- 如遇到配置警告，可以移除该选项或升级 Next.js 版本
-
 ## 重要文件说明
 
 ### `/src/app/globals.css`
@@ -243,9 +234,11 @@ public/
 - PDF 转图片处理
 - 图片批量提取工具
 
-### Tailwind CSS 版本检查
-- `check-tailwind-version.js` - 构建前检查 Tailwind CSS 版本
-- `prebuild` 脚本确保版本兼容性
+### 服务器管理脚本
+- `monitor_servers.sh` - 自动监控和重启开发服务器
+- 支持主分支（端口3000）和开发分支（端口4000）的同时运行
+- 每30秒检查一次服务器状态，自动重启意外停止的服务器
+- 脚本路径配置：`/Volumes/4T 固态/personal-website-backup-20250925 2`（需要根据实际环境调整）
 
 ## 项目特色
 
@@ -307,16 +300,14 @@ npm run dev -- -p 4000  # 端口4000
 - 注意响应式断点设置
 
 ### 服务器管理
+- 使用 `monitor_servers.sh` 脚本保持服务器持续运行
 - 检查端口占用：`lsof -ti:3000` 和 `lsof -ti:4000`
-- 查看服务器日志：`tail -f dev-server.log`
-- 后台启动服务器：`nohup npm run dev > dev-server.log 2>&1 &`
+- 查看监控日志：`tail -f monitor.log`
+- 手动启动监控：`nohup ./monitor_servers.sh > monitor.log 2>&1 &`
+
+- 使用简体中文回答用户的所有问题
 
 ### 开发环境注意事项
 - 当前工作目录：`/Volumes/003/personal-website-backup-20250925 3/personal-website`
+- 监控脚本路径可能需要根据实际环境调整（当前脚本指向 `/Volumes/4T 固态/personal-website-backup-20250925 2`）
 - 网络环境可能限制 GitHub 访问，优先使用本地开发环境
-- 开发服务器默认在后台运行，可通过日志查看状态
-
-### Tailwind CSS 版本兼容性
-- 项目使用 Tailwind CSS v3.4.17
-- 构建前会运行版本检查脚本
-- 如需升级版本，请同时更新 `check-tailwind-version.js` 文件

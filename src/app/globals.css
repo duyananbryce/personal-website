@@ -1,11 +1,19 @@
 /**
- * 全局样式文件 - 杜亚楠个人作品集网站 (开发分支)
- *
- * 开发分支使用 Tailwind CSS v3 配置和 Geist 字体
+ * 全局样式文件 - 杜亚楠个人作品集网站
+ * 
+ * 本文件定义了网站的全局样式，包括：
+ * - 字体导入和配置（西文字体和中文字体）
+ * - CSS变量定义（色彩、间距、圆角、阴影等）
+ * - Tailwind CSS主题配置
+ * - 暗色主题支持
+ * - 自定义滚动条、文本选择等基础样式
+ * - 渐变背景、玻璃态效果、动画等高级样式
  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/inter/index.css";
+@import "@fontsource/space-grotesk/index.css";
 
 /* Styrene A 字体 - Anthropic官方西文字体 */
 @font-face {
@@ -62,130 +70,290 @@
   font-display: swap;
 }
 
-/* 中文字体配置 */
+/* 方正兰亭特黑扁简体 - 中文字体（标题用） */
 @font-face {
-  font-family: 'FZLanTingHei扁';
+  font-family: 'FZLanTing';
   src: url('/fonts/方正兰亭特黑扁简体.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
+/* 方正兰亭黑扁简体 - 中文字体（正文用） */
 @font-face {
-  font-family: 'FZLanTingHei扁';
-  src: url('/fonts/方正兰亭黑扁简体.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'FZLanTingHeiBian';
+  src: url('/fonts/FangZhengLanTingHeiBianJianTi.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-/* CSS 变量定义 */
 :root {
-  /* 基础色彩 - 现代简约主义暖色调 */
-  --background: #FAF9F5;
-  --foreground: #141413;
-  --foreground-secondary: #5E5D59;
-  --surface: #FFFFFF;
-  --border: #E8E6DC;
+  /* 基础色彩系统 - 现代简约主义暖色调 */
+  --background: #FAF9F5; /* 暖米白背景 */
+  --foreground: #141413; /* 主文字色 - 近黑色 */
+  --foreground-secondary: #5E5D59; /* 次要文字色 - 深灰色 */
+  --foreground-tertiary: #87867F; /* 第三级文字色 - 中灰色 */
+  --surface: #FFFFFF; /* 纯白表面 */
+  --surface-dark: #F5F4ED; /* 暖米色表面 */
 
-  /* 主色调 - 焦糖珊瑚色系 */
-  --primary: #D97757;
-  --primary-light: #E59980;
-  --primary-dark: #B85A3D;
+  /* 边框色系统 - 三级灰度层次 */
+  --border-light: #F0EEE6; /* 最浅边框 - 微妙分隔 */
+  --border: #E8E6DC; /* 中等边框 - 普通分隔 */
+  --border-dark: #DEDCD1; /* 深边框 - 强调分隔 */
 
-  /* 阴影系统 */
-  --shadow-primary: 0 0 20px rgba(217, 119, 87, 0.15);
+  /* 主色调系统 - 焦糖珊瑚色系 */
+  --primary: #D97757; /* 主珊瑚色 - 温暖橙红色 */
+  --primary-light: #E59980; /* 浅珊瑚色 - 悬停状态 */
+  --primary-dark: #B85A3D; /* 深珊瑚色 - 边框强调 */
+  --primary-subtle: rgba(217, 119, 87, 0.1); /* 极淡珊瑚背景 */
+
+  /* 辅助色系统 - 现代简洁色系 */
+  --accent: #F5F4ED; /* 暖米色背景 */
+  --accent-light: #FAF9F5; /* 更浅暖米色 */
+  --accent-dark: #E8E6DC; /* 暖灰色背景 */
+
+  /* 中性色系统 - 精致灰度色系 */
+  --gray-50: #FAF9F5;
+  --gray-100: #F5F4ED;
+  --gray-200: #E8E6DC;
+  --gray-300: #DEDCD1;
+  --gray-400: #D4D2C8;
+  --gray-500: #A9A8A0;
+  --gray-600: #87867F;
+  --gray-700: #5E5D59;
+  --gray-800: #3B3A37;
+  --gray-900: #141413;
+
+  /* 字体系统 - Claude风格字体 */
+  --font-heading: 'Styrene A', 'Inter', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Styrene A', 'FZLanTingHeiBian', 'FZLanTing', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* 间距系统 - 现代简约主义间距系统 */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+  --space-5xl: 10rem;
+
+  /* 边框圆角系统 - 精致圆角系统 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem; /* 6px - 按钮圆角 */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+
+  /* 阴影系统 - 精致阴影系统 */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
+  --shadow-primary: 0 0 20px rgba(217, 119, 87, 0.15); /* 主色调阴影 */
 }
 
-/* 暗色主题支持 */
+
+/* 暗色主题 - Claude官网风格适配 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141413;
-    --foreground: #FAF9F5;
-    --foreground-secondary: #E8E6DC;
-    --surface: #1A1A19;
-    --border: #333230;
-    --primary: #E59980;
-    --primary-light: #D97757;
-    --primary-dark: #F4B5A4;
+    --background: #0F0F0F;
+    --foreground: #F5F5F5;
+    --foreground-secondary: #A3A3A3;
+    --surface: #1A1A1A;
+    --surface-dark: #262626;
+    --border: #404040;
+
+    --primary: #FF8C5A;
+    --primary-light: #FF6B35;
+    --primary-dark: #E55A2B;
+    --primary-subtle: #2A1F1C;
+
+    --accent: #262626;
+    --accent-light: #1A1A1A;
+    --accent-dark: #404040;
   }
 }
 
-/* 基础样式重置 */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
+/**
+ * 基础样式 - 页面整体设置
+ * 设置背景色、文字色、字体、行高等基础属性
+ */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* 字体平滑渲染 */
+  -moz-osx-font-smoothing: grayscale; /* Firefox字体渲染 */
 }
 
-/* 自定义滚动条 */
+/* 标题字体优化 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 自定义滚动条样式 */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 8px;  /* 滚动条宽度 */
+  height: 8px; /* 滚动条高度 */
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--surface);
-  border-radius: 4px;
+  background: var(--gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  background: var(--gray-400);
+  border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: var(--gray-500);
 }
 
-/* 文本选择样式 */
+/* 文本选择样式 - 使用主题色 */
 ::selection {
-  background: var(--primary);
-  color: var(--surface);
+  background: var(--primary-light);
+  color: var(--background);
 }
 
-/* 自定义动画 */
+/* 焦点样式 - 无障碍访问支持 */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* 渐变背景工具类 */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+}
+
+/* 玻璃态效果工具类 */
+.glass {
+  backdrop-filter: blur(8px); /* 背景模糊 */
+  background: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 玻璃边框 */
+}
+
+/* 动画系统 */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-10px); } /* 上浮10px */
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 5px rgba(217, 119, 87, 0.3); }
-  100% { box-shadow: 0 0 20px rgba(217, 119, 87, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(244, 129, 32, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(244, 129, 32, 0.6); } /* 脉冲发光效果 */
 }
 
+/* 浮动动画工具类 */
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
+/* 脉冲发光动画工具类 */
 .animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite alternate;
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* 玻璃态效果 */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Logo样式 - 透明背景无阴影 */
+.logo-clean {
+  background: transparent !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
 }
 
-/* 工具类 */
-.shadow-primary {
-  box-shadow: var(--shadow-primary);
+.logo-clean img {
+  background: transparent !important;
+  filter: brightness(1) contrast(1) !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
 }
 
-.text-balance {
-  text-wrap: balance;
+/* 更激进的logo处理 - 裁剪阴影 */
+.logo-aggressive {
+  background: transparent !important;
+  clip-path: inset(0 0 0 0) !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  transform: scale(1) !important;
+}
+
+.logo-aggressive img {
+  background: transparent !important;
+  clip-path: inset(0 0 0 0) !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  transform: scale(1) !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* 最激进的logo处理 - 使用mask完全移除阴影 */
+.logo-mask {
+  background: transparent !important;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%) !important;
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%) !important;
+  filter: 
+    brightness(1) 
+    contrast(1.2) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.logo-mask img {
+  background: transparent !important;
+  mask-image: none !important;
+  filter: 
+    brightness(1) 
+    contrast(1.2) 
+    saturate(1) 
+    hue-rotate(0deg) 
+    blur(0px) 
+    drop-shadow(0 0 0 transparent) !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  transform: scale(0.9) !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
 }
