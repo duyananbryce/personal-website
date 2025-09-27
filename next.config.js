@@ -13,9 +13,7 @@ const nextConfig = {
         ]
       }
     ]
-  },
-  // 允许的开发源地址
-  allowedDevOrigins: ['http://localhost:3000', 'http://172.16.2.211:3000']
+  }
 }
 
 module.exports = nextConfig

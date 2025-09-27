@@ -196,8 +196,8 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            {/* 时间轴线 - 精致设计 */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent"></div>
+            {/* 时间轴线 - 珊瑚橙色实线 */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary"></div>
 
             {[
               {
@@ -231,7 +231,7 @@ export default function Home() {
             ].map((experience, index) => (
               <div key={index} className="relative mb-12 last:mb-0">
                 {/* 时间轴节点 - 精致设计 */}
-                <div className="absolute left-6 w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                <div className="absolute left-8 top-1/2 -translate-y-1/2 w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center -translate-x-1/2">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
 
@@ -524,15 +524,17 @@ export default function Home() {
               </div>
             ))}
             <div
-              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
+              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
               onClick={() => window.location.href = "/ai-portfolio"}
             >
-              <div className="flex items-center justify-center h-full p-4">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
-                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
-                  <p className="text-xs text-foreground-secondary">探索更多AI创意项目</p>
-                </div>
+              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
+              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
+              <p className="text-foreground-secondary text-sm mb-4">探索更多AI创意项目</p>
+              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
+                <span>查看全部</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -571,15 +573,17 @@ export default function Home() {
               </div>
             ))}
             <div
-              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
+              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
               onClick={() => window.location.href = "/planning-portfolio"}
             >
-              <div className="flex items-center justify-center h-full p-4">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
-                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
-                  <p className="text-xs text-foreground-secondary">探索更多策划案例</p>
-                </div>
+              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
+              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
+              <p className="text-foreground-secondary text-sm mb-4">探索更多策划案例</p>
+              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
+                <span>查看全部</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -618,15 +622,17 @@ export default function Home() {
               </div>
             ))}
             <div
-              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
+              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
               onClick={() => window.location.href = "/product-planning"}
             >
-              <div className="flex items-center justify-center h-full p-4">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
-                  <h3 className="text-base font-bold text-foreground mb-1">查看完整作品集</h3>
-                  <p className="text-xs text-foreground-secondary">探索更多产品企划</p>
-                </div>
+              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
+              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
+              <p className="text-foreground-secondary text-sm mb-4">探索更多产品企划</p>
+              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
+                <span>查看全部</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -748,15 +754,17 @@ export default function Home() {
             
             {/* 查看全部视频卡片 */}
             <div
-              className="relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/30 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer hover:border-primary/50 group"
+              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
               onClick={() => window.location.href = "/video-planning"}
             >
-              <div className="flex items-center justify-center h-full p-4">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-3 group-hover:translate-x-1 transition-transform duration-300">→</div>
-                  <h3 className="text-base font-bold text-foreground mb-1">查看全部视频</h3>
-                  <p className="text-xs text-foreground-secondary">探索更多视频策划案例</p>
-                </div>
+              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
+              <h3 className="text-lg font-bold text-foreground mb-2">查看全部视频</h3>
+              <p className="text-foreground-secondary text-sm mb-4">探索更多视频策划案例</p>
+              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
+                <span>查看全部</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -764,7 +772,7 @@ export default function Home() {
       </section>
 
       {/* Footer - 现代简约设计 */}
-      <footer className="bg-gradient-to-br from-foreground to-foreground/95 text-white py-24 px-6 lg:px-8 border-t border-border">
+      <footer className="bg-foreground text-white py-24 px-6 lg:px-8 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-16">
             <div className="lg:col-span-1">
