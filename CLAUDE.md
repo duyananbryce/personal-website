@@ -14,6 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - 构建生产版本
 - `npm run start` - 启动生产服务器
 - `npm run lint` - 运行 ESLint 检查
+- `npm run check-tailwind` - 检查 Tailwind CSS 版本
 
 ### 测试
 目前没有配置测试命令。
@@ -47,6 +48,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - 辅助：Space Grotesk
 - **动画**: Framer Motion 12.23.21 + 内置 CSS 动画系统
 - **构建工具**: Vercel
+- **图片处理**: @aws-sdk/client-s3 (S3集成)
+- **设计工具**: figma-js (Figma集成)
 
 ### 目录结构
 ```
@@ -240,6 +243,10 @@ public/
 - PDF 转图片处理
 - 图片批量提取工具
 
+### Tailwind CSS 版本检查
+- `check-tailwind-version.js` - 构建前检查 Tailwind CSS 版本
+- `prebuild` 脚本确保版本兼容性
+
 ## 项目特色
 
 ### 内容丰富性
@@ -308,3 +315,8 @@ npm run dev -- -p 4000  # 端口4000
 - 当前工作目录：`/Volumes/003/personal-website-backup-20250925 3/personal-website`
 - 网络环境可能限制 GitHub 访问，优先使用本地开发环境
 - 开发服务器默认在后台运行，可通过日志查看状态
+
+### Tailwind CSS 版本兼容性
+- 项目使用 Tailwind CSS v3.4.17
+- 构建前会运行版本检查脚本
+- 如需升级版本，请同时更新 `check-tailwind-version.js` 文件
