@@ -39,6 +39,12 @@ elif [ "$CURRENT_BRANCH" = "feature/video-planning-dev" ]; then
     # 使用开发分支专用的layout.tsx (Geist字体)
     cp config-dev/layout-dev.tsx src/app/layout.tsx
 
+    # 使用开发分支专用的globals.css (Tailwind CSS v3配置)
+    cp config-dev/globals-dev.css src/app/globals.css
+
+    # 复制Tailwind配置文件
+    cp config-dev/tailwind.config.js ./tailwind.config.js
+
     # 恢复开发分支的导航 (5个菜单项，包含视频策划)
     git checkout feature/video-planning-dev -- src/components/Navigation.tsx
 
