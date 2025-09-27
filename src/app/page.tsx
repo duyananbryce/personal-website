@@ -510,12 +510,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/assets/images/ai-portfolio/page-${pageNum}.png`);
+                  setSelectedImage(`/assets/images/ai-portfolio/page-${pageNum}.webp`);
                 }}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/assets/images/ai-portfolio/page-${pageNum}.png`}
+                    src={`/assets/images/ai-portfolio/page-${pageNum}.webp`}
                     alt={`AI作品集第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -559,12 +559,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/assets/images/planning-portfolio/page-${pageNum}.png`);
+                  setSelectedImage(`/assets/images/planning-portfolio/page-${pageNum}.webp`);
                 }}
               >
                 <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/assets/images/planning-portfolio/page-${pageNum}.png`}
+                    src={`/assets/images/planning-portfolio/page-${pageNum}.webp`}
                     alt={`策划作品集第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -608,12 +608,12 @@ export default function Home() {
                 className="group transition-all duration-300 cursor-pointer"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(`/assets/images/product-planning/page-${pageNum}.png`);
+                  setSelectedImage(`/assets/images/product-planning/page-${pageNum}.webp`);
                 }}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
                   <img
-                    src={`/assets/images/product-planning/page-${pageNum}.png`}
+                    src={`/assets/images/product-planning/page-${pageNum}.webp`}
                     alt={`产品企划第${pageNum}页`}
                     className="w-full h-auto object-cover"
                   />
@@ -656,7 +656,7 @@ export default function Home() {
               {
                 id: 1,
                 title: "一张笑脸圈粉800万，他的漫画有何魔力？",
-                image: "/assets/images/video-planning/video1.jpg",
+                image: "/assets/images/video-planning/video1.webp",
                 platform: "bilibili",
                 views: "280万",
                 time: "2023.12"
@@ -664,7 +664,7 @@ export default function Home() {
               {
                 id: 2,
                 title: "为什么北大选课堪称'海淀赌场'？",
-                image: "/assets/images/video-planning/video2.jpg",
+                image: "/assets/images/video-planning/video2.webp",
                 platform: "bilibili",
                 views: "156万",
                 time: "2023.11"
@@ -672,7 +672,7 @@ export default function Home() {
               {
                 id: 3,
                 title: "做题全靠想象力是一种怎样的体验 3.0",
-                image: "/assets/images/video-planning/video3.jpg",
+                image: "/assets/images/video-planning/video3.webp",
                 platform: "bilibili",
                 views: "420万",
                 time: "2023.10"
@@ -680,7 +680,7 @@ export default function Home() {
               {
                 id: 4,
                 title: "围观了一场设计比烂大赛，设计师：我不做人啦！",
-                image: "/assets/images/video-planning/video4.jpg",
+                image: "/assets/images/video-planning/video4.webp",
                 platform: "bilibili",
                 views: "320万",
                 time: "2023.08"
@@ -688,7 +688,7 @@ export default function Home() {
               {
                 id: 5,
                 title: "警告！别碰设计师的屏幕！",
-                image: "/assets/images/video-planning/video5.jpg",
+                image: "/assets/images/video-planning/video5.webp",
                 platform: "bilibili",
                 views: "580万",
                 time: "2023.09"
