@@ -124,7 +124,7 @@ export default function Home() {
             {/* 个人基本信息 - 精致排版 */}
             <div className="text-left max-w-4xl mx-auto space-y-10">
               <div className="space-y-6">
-                <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-tight text-foreground tracking-tight">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl mobile-title-xl font-bold leading-tight text-foreground tracking-tight">
                   杜亚楠
                   <br />
                   <span className="text-primary">内容创意策划</span>
@@ -134,49 +134,49 @@ export default function Home() {
                 <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
               </div>
 
-              <p className="text-2xl md:text-3xl text-foreground-secondary leading-relaxed font-light max-w-3xl mx-auto pl-1">
+              <p className="text-xl md:text-2xl mobile-text-lg text-foreground-secondary leading-relaxed font-light max-w-3xl mx-auto pl-1 mobile-paragraph">
                 专注于内容策划、品牌营销和视频制作，拥有丰富的项目管理经验和创意执行能力。
-                致力于通过优质内容创造品牌价值，推动文化传播和创新发展。
+                致力于通过优质内容创造品牌价值，推动文化传播和的创新。
               </p>
             </div>
 
-            {/* 核心能力标签 - 精致设计 */}
-            <div className="flex flex-wrap justify-center gap-6 mt-16">
-              <span className="px-8 py-4 bg-surface border border-border rounded-full text-lg font-medium text-foreground hover:border-primary hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md">
+            {/* 核心能力标签 */}
+            <div className="grid grid-cols-2 gap-4 mb-16">
+              <div className="bg-accent-dark text-foreground px-6 py-3 rounded-full text-center font-semibold mobile-title-base mobile-tag-button mobile-touch-target">
                 内容策划
-              </span>
-              <span className="px-8 py-4 bg-surface border border-border rounded-full text-lg font-medium text-foreground hover:border-primary hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              </div>
+              <div className="bg-accent-dark text-foreground px-6 py-3 rounded-full text-center font-semibold mobile-title-base mobile-tag-button mobile-touch-target">
                 品牌营销
-              </span>
-              <span className="px-8 py-4 bg-surface border border-border rounded-full text-lg font-medium text-foreground hover:border-primary hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              </div>
+              <div className="bg-accent-dark text-foreground px-6 py-3 rounded-full text-center font-semibold mobile-title-base mobile-tag-button mobile-touch-target">
                 视频制作
-              </span>
-              <span className="px-8 py-4 bg-surface border border-border rounded-full text-lg font-medium text-foreground hover:border-primary hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md">
-                项目管理
-              </span>
-              <span className="px-8 py-4 bg-surface border border-border rounded-full text-lg font-medium text-foreground hover:border-primary hover:text-primary transition-all duration-300 shadow-sm hover:shadow-md">
-                AI应用
-              </span>
+              </div>
+              <div className="bg-accent-dark text-foreground px-6 py-3 rounded-full text-center font-semibold mobile-title-base mobile-tag-button mobile-touch-target">
+                AI 应用
+              </div>
             </div>
 
-            {/* 主要成就 - 现代卡片设计 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-              <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-                <div className="text-4xl font-bold text-primary mb-3">15亿+</div>
-                <p className="text-foreground-secondary leading-relaxed text-lg">
-                  累计视频播放量
+            {/* 主要成就 - 合并为一行 */}
+            <div className="grid grid-cols-3 gap-3 mt-20">
+              <div className="bg-surface border border-border rounded-2xl p-3 md:p-4 hover:shadow-lg transition-all duration-300 hover:border-primary/30 flex flex-col justify-center items-center text-center h-20 md:h-24">
+                <div className="text-2xl mobile-title-base font-bold text-primary mb-1">15亿+</div>
+                <p className="text-foreground-secondary leading-relaxed text-sm mobile-text-sm">
+                  累计播放量
                 </p>
               </div>
-              <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-                <div className="text-4xl font-bold text-primary mb-3">1000万+</div>
-                <p className="text-foreground-secondary leading-relaxed text-lg">
-                  社交媒体粉丝
+              <div className="bg-surface border border-border rounded-2xl p-3 md:p-4 hover:shadow-lg transition-all duration-300 hover:border-primary/30 flex flex-col justify-center items-center text-center h-20 md:h-24">
+                <div className="inline-flex items-baseline gap-0.5 whitespace-nowrap text-2xl mobile-title-base font-bold text-primary mb-1">
+                  <span>1千万</span>
+                  <span>+</span>
+                </div>
+                <p className="text-foreground-secondary leading-relaxed text-sm mobile-text-sm">
+                  社交粉丝
                 </p>
               </div>
-              <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-                <div className="text-4xl font-bold text-primary mb-3">50+</div>
-                <p className="text-foreground-secondary leading-relaxed text-lg">
-                  成功项目案例
+              <div className="bg-surface border border-border rounded-2xl p-3 md:p-4 hover:shadow-lg transition-all duration-300 hover:border-primary/30 flex flex-col justify-center items-center text-center h-20 md:h-24">
+                <div className="text-2xl mobile-title-base font-bold text-primary mb-1">50家</div>
+                <p className="text-foreground-secondary leading-relaxed text-sm mobile-text-sm">
+                  成功案例
                 </p>
               </div>
             </div>
@@ -188,16 +188,16 @@ export default function Home() {
       <section className="py-12 px-6 lg:px-8 border-t border-border bg-surface">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-foreground mb-4 tracking-tight">工作履历</h2>
+            <h2 className="text-4xl mobile-title-lg font-bold text-foreground mb-4 tracking-tight">工作履历</h2>
             <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-6"></div>
-            <p className="text-lg text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-lg mobile-text-base text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed mobile-paragraph text-left">
               专业的内容策划与项目管理经验，在不同领域积累了丰富的工作成果
             </p>
           </div>
 
           <div className="relative">
-            {/* 时间轴线 - 珊瑚橙色实线 */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary"></div>
+            {/* 时间轴线 - 在移动端隐藏，PC端保留 */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary hidden md:block"></div>
 
             {[
               {
@@ -205,60 +205,59 @@ export default function Home() {
                 position: "市场营销经理",
                 period: "2024.10 - 至今",
                 description: "负责啊哈娱乐旗下《伍六七》IP的市场营销工作，包含《伍六七》动画第五季的市场营销工作、以及音乐巡演、手游、衍生品等市场推广。",
-                highlights: ["IP营销", "动画推广", "音乐巡演", "手游推广", "衍生品"]
+                highlights: ["IP营销", "动画推广", "音乐巡演"]
               },
               {
                 company: "猿辅导在线教育",
                 position: "视频编导",
                 period: "2022.12 - 2024.10",
                 description: "负责猿辅导电商直播的短视频生产工作，包括脚本创作、拍摄、剪辑等；参与信息流短视频投放工作，负责千川、随心推的推广计划搭建；负责电商直播间的搭建、日常维护，以及户外直播活动的支持。",
-                highlights: ["视频制作", "直播运营", "信息流投放", "脚本创作"]
+                highlights: ["视频制作", "直播运营", "信息流投放"]
               },
               {
                 company: "站酷网",
                 position: "抖音短视频运营",
                 period: "2021.8 - 2022.12",
                 description: "从零到一搭建新媒体视频矩阵，负责站酷网官方抖音、B站、小红书账号的视频运营；为公司相关活动提供内容创意，提升活动效果。",
-                highlights: ["账号运营", "内容策划", "视频制作", "品牌传播"]
+                highlights: ["账号运营", "内容策划", "视频制作"]
               },
               {
                 company: "猿辅导在线教育",
                 position: "内容运营",
                 period: "2020.6 - 2021.8",
                 description: "独立负责小猿搜题APP抖音、B站官方账号的内容更新和账号运营；负责小猿搜题社区多个栏目的内容制作；在重大活动节点策划品牌内容活动和落地执行。",
-                highlights: ["账号运营", "内容创作", "爆款策划", "品牌推广"]
+                highlights: ["账号运营", "内容创作", "爆款策划"]
               }
             ].map((experience, index) => (
-              <div key={index} className="relative mb-12 last:mb-0">
-                {/* 时间轴节点 - 精致设计 */}
-                <div className="absolute left-8 top-1/2 -translate-y-1/2 w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center -translate-x-1/2">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div key={index} className="relative mb-8 last:mb-0">
+                {/* 时间轴节点 - 在移动端隐藏，PC端保留 */}
+                <div className="absolute left-6 top-6 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md -translate-x-1/2 hidden md:block">
                 </div>
 
-                {/* 经历卡片 - 现代设计 */}
-                <div className="ml-20">
-                  <div className="bg-background border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-                    <div className="mb-4">
-                      <div className="flex justify-between items-start">
+                {/* 经历卡片 - 移动端去掉左边距，PC端保留 */}
+                <div className="ml-0 md:ml-16">
+                  <div className="bg-background border border-border rounded-xl p-5 hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                    <div className="mb-3">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                         <div>
-                          <h3 className="text-xl font-bold text-foreground mb-2 tracking-tight">{experience.company}</h3>
-                          <p className="text-lg text-primary font-medium">{experience.position}</p>
+                          <h3 className="text-lg mobile-title-base font-bold text-foreground mb-1">{experience.company}</h3>
+                          <p className="text-base mobile-text-base text-primary font-medium">{experience.position}</p>
                         </div>
-                        <div className="text-xl text-foreground bg-border px-3 py-1 rounded-full text-left whitespace-nowrap">
+                        <div className="text-sm mobile-text-sm text-foreground-secondary bg-surface px-3 py-1 rounded-full text-left inline-flex">
                           {experience.period}
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-foreground-secondary mb-6 leading-relaxed text-base">
+                    <p className="text-foreground-secondary mb-4 leading-relaxed text-sm mobile-text-sm mobile-paragraph text-left">
                       {experience.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-nowrap gap-2 overflow-x-auto scrollbar-hide">
                       {experience.highlights.map((highlight, idx) => (
                         <span
                           key={idx}
-                          className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors duration-300"
+                          className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs mobile-text-xs font-medium border border-primary/20 whitespace-nowrap flex-shrink-0"
                         >
                           {highlight}
                         </span>
@@ -273,44 +272,44 @@ export default function Home() {
       </section>
 
       {/* 负责过的账号 - 精致设计 */}
-      <section className="py-20 px-6 lg:px-8 border-t border-border bg-background">
+      <section className="py-12 md:py-20 px-6 lg:px-8 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">负责过的账号</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl mobile-title-lg font-bold text-foreground mb-4 md:mb-6 tracking-tight">负责过的账号</h2>
+            <div className="w-20 md:w-24 h-1 bg-primary rounded-full mx-auto mb-6 md:mb-8"></div>
+            <p className="text-base md:text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed mobile-paragraph text-left">
               以下账号的所有选题、文案撰写、剪辑、配音均为个人完成
             </p>
           </div>
 
           {/* 三栏布局 - 现代卡片设计 */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
             {/* 猿辅导 - 精致卡片 */}
-            <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
-              <div className="flex items-center mb-8">
-                <div className="w-14 h-14 flex items-center justify-center mr-4">
+            <div className="bg-surface border border-border rounded-2xl p-4 md:p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
+              <div className="flex items-center mb-4 md:mb-8">
+                <div className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center mr-3 md:mr-4">
                   <img src="/assets/icons/猿辅导.svg" alt="猿辅导" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground tracking-tight">猿辅导</h3>
+                <h3 className="text-lg md:text-2xl font-bold text-foreground tracking-tight">猿辅导</h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-4">
                 <a
                   href="https://v.douyin.com/L3YnhTJ/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
-                        <p className="text-foreground-tertiary text-sm">抖音账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">小猿搜题</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">抖音账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -319,19 +318,19 @@ export default function Home() {
                   href="https://space.bilibili.com/385925172/video"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">小猿搜题</h4>
-                        <p className="text-foreground-tertiary text-sm">B站账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">小猿搜题</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">B站账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -340,31 +339,31 @@ export default function Home() {
             </div>
 
             {/* 站酷网 - 精致卡片 */}
-            <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
-              <div className="flex items-center mb-8">
-                <div className="w-14 h-14 flex items-center justify-center mr-4">
+            <div className="bg-surface border border-border rounded-2xl p-4 md:p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
+              <div className="flex items-center mb-4 md:mb-8">
+                <div className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center mr-3 md:mr-4">
                   <img src="/assets/icons/站酷123.svg" alt="站酷" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground tracking-tight">站酷网</h3>
+                <h3 className="text-lg md:text-2xl font-bold text-foreground tracking-tight">站酷网</h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-4">
                 <a
                   href="https://www.douyin.com/user/MS4wLjABAAAAkxinZjAvJZk4JVMIhyjf_qF__-9qG7QPp_8W6sioT-s"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
-                        <p className="text-foreground-tertiary text-sm">抖音账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">抖音账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -373,19 +372,19 @@ export default function Home() {
                   href="https://space.bilibili.com/99382669/video"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
-                        <p className="text-foreground-tertiary text-sm">B站账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">站酷家的小Z老师</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">B站账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -394,40 +393,40 @@ export default function Home() {
                   href="https://v.douyin.com/L3YKnmf/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/douyin-icon.svg" alt="抖音" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
-                        <p className="text-foreground-tertiary text-sm">抖音账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">抖音账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
                 </a>
                 <a
-                  href="https://space.bilibili.com/616419739/video"
+                  href="https://space.bilibili.com/616419739"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
-                        <p className="text-foreground-tertiary text-sm">B站账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">懂点儿设计</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">B站账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -436,52 +435,52 @@ export default function Home() {
             </div>
 
             {/* 即时设计 - 精致卡片 */}
-            <div className="bg-surface border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
-              <div className="flex items-center mb-8">
-                <div className="w-14 h-14 flex items-center justify-center mr-4">
+            <div className="bg-surface border border-border rounded-2xl p-4 md:p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30 group">
+              <div className="flex items-center mb-4 md:mb-8">
+                <div className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center mr-3 md:mr-4">
                   <img src="/assets/icons/即时设计.svg" alt="即时设计" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground tracking-tight">即时设计</h3>
+                <h3 className="text-lg md:text-2xl font-bold text-foreground tracking-tight">即时设计</h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-4">
                 <a
-                  href="https://space.bilibili.com/2030180204/video"
+                  href="https://space.bilibili.com/2030180204"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">新来的设计师</h4>
-                        <p className="text-foreground-tertiary text-sm">B站账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">新来的设计师</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">B站账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
                 </a>
                 <a
-                  href="https://space.bilibili.com/1355154418/video"
+                  href="https://space.bilibili.com/1355154418"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block bg-background border border-border rounded-xl p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
+                  className="group block bg-background border border-border rounded-xl p-3 md:p-4 hover:bg-surface hover:shadow-md transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <div className="w-8 md:w-12 h-8 md:h-12 flex items-center justify-center">
                         <img src="/assets/icons/bilibili-icon.svg" alt="B站" className="w-full h-full object-contain" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground text-base group-hover:text-primary transition-colors">设计练习生-乘风</h4>
-                        <p className="text-foreground-tertiary text-sm">B站账号</p>
+                        <h4 className="font-semibold text-foreground text-sm md:text-base group-hover:text-primary transition-colors">设计练习生乘风</h4>
+                        <p className="text-foreground-tertiary text-xs md:text-sm">B站账号</p>
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 md:w-5 h-4 md:h-5 text-foreground-tertiary group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </div>
@@ -493,48 +492,44 @@ export default function Home() {
       </section>
 
       {/* AI方向作品集 - 现代设计风格 */}
-      <section className="py-24 px-6 lg:px-8 bg-surface border-t border-border">
+      <section className="py-16 md:py-24 px-6 lg:px-8 bg-surface border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">AI方向作品集</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 tracking-tight">AI方向作品集</h2>
+            <div className="w-20 md:w-24 h-1 bg-primary rounded-full mx-auto mb-6 md:mb-8"></div>
+            <p className="text-base md:text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed text-left">
               探索人工智能技术在各领域的创新应用，推动技术边界和创意表达
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
-              <div
-                key={pageNum}
-                className="group transition-all duration-300 cursor-pointer"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedImage(`/assets/images/ai-portfolio/page-${pageNum}.webp`);
-                }}
-              >
-                <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
-                  <img
-                    src={`/assets/images/ai-portfolio/page-${pageNum}.webp`}
-                    alt={`AI作品集第${pageNum}页`}
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8">
+            {/* 只显示一张图片 - 点击跳转到子页面 */}
             <div
-              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
+              className="group transition-all duration-300 cursor-pointer md:col-span-3"
               onClick={() => window.location.href = "/ai-portfolio"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多AI创意项目</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
-                <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="relative bg-background border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
+                <img
+                  src={`/assets/images/ai-portfolio/page-1.webp`}
+                  alt="AI作品集第1页"
+                  className="w-full h-auto object-cover"
+                />
+                {/* 始终显示的遮罩和按钮 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transform translate-y-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-bold text-sm md:text-base mb-1">查看完整作品集</h3>
+                      <p className="text-white/80 text-xs md:text-sm text-left">探索更多AI创意项目</p>
+                    </div>
+                    <div className="flex items-center text-white hover:text-primary transition-colors duration-200">
+                      <span className="text-sm md:text-base font-medium">查看全部</span>
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -542,48 +537,44 @@ export default function Home() {
       </section>
 
       {/* 策划作品集 - 现代设计风格 */}
-      <section className="py-24 px-6 lg:px-8 bg-background border-t border-border">
+      <section className="py-16 md:py-24 px-6 lg:px-8 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">策划作品集</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 tracking-tight">策划作品集</h2>
+            <div className="w-20 md:w-24 h-1 bg-primary rounded-full mx-auto mb-6 md:mb-8"></div>
+            <p className="text-base md:text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed text-left">
               专业的品牌策划与创意执行，展现内容策划的完整价值链
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
-              <div
-                key={pageNum}
-                className="group transition-all duration-300 cursor-pointer"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedImage(`/assets/images/planning-portfolio/page-${pageNum}.webp`);
-                }}
-              >
-                <div className="relative bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
-                  <img
-                    src={`/assets/images/planning-portfolio/page-${pageNum}.webp`}
-                    alt={`策划作品集第${pageNum}页`}
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8">
+            {/* 只显示一张图片 - 点击跳转到子页面 */}
             <div
-              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
+              className="group transition-all duration-300 cursor-pointer md:col-span-3"
               onClick={() => window.location.href = "/planning-portfolio"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多策划案例</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
-                <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="relative bg-background border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
+                <img
+                  src={`/assets/images/planning-portfolio/page-1.webp`}
+                  alt="策划作品集第1页"
+                  className="w-full h-auto object-cover"
+                />
+                {/* 始终显示的遮罩和按钮 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transform translate-y-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-bold text-sm md:text-base mb-1">查看完整作品集</h3>
+                      <p className="text-white/80 text-xs md:text-sm text-left">专业的品牌策划与创意执行</p>
+                    </div>
+                    <div className="flex items-center text-white hover:text-primary transition-colors duration-200">
+                      <span className="text-sm md:text-base font-medium">查看全部</span>
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -591,48 +582,44 @@ export default function Home() {
       </section>
 
       {/* 产品企划 - 现代设计风格 */}
-      <section className="py-24 px-6 lg:px-8 bg-surface border-t border-border">
+      <section className="py-16 md:py-24 px-6 lg:px-8 bg-surface border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">产品企划</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 tracking-tight">产品企划</h2>
+            <div className="w-20 md:w-24 h-1 bg-primary rounded-full mx-auto mb-6 md:mb-8"></div>
+            <p className="text-base md:text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed text-left">
               毛绒盲盒产品策划与设计，从概念到市场的完整产品企划案例
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 5 }, (_, i) => i + 1).map((pageNum) => (
-              <div
-                key={pageNum}
-                className="group transition-all duration-300 cursor-pointer"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedImage(`/assets/images/product-planning/page-${pageNum}.webp`);
-                }}
-              >
-                <div className="relative bg-background border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
-                  <img
-                    src={`/assets/images/product-planning/page-${pageNum}.webp`}
-                    alt={`产品企划第${pageNum}页`}
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8">
+            {/* 只显示一张图片 - 点击跳转到子页面 */}
             <div
-              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
+              className="group transition-all duration-300 cursor-pointer md:col-span-3"
               onClick={() => window.location.href = "/product-planning"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看完整作品集</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多产品企划</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
-                <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+              <div className="relative bg-background border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50">
+                <img
+                  src={`/assets/images/product-planning/page-1.webp`}
+                  alt="产品企划第1页"
+                  className="w-full h-auto object-cover"
+                />
+                {/* 始终显示的遮罩和按钮 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transform translate-y-0">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-bold text-sm md:text-base mb-1">查看完整企划案</h3>
+                      <p className="text-white/80 text-xs md:text-sm text-left">毛绒盲盒产品策划与设计</p>
+                    </div>
+                    <div className="flex items-center text-white hover:text-primary transition-colors duration-200">
+                      <span className="text-sm md:text-base font-medium">查看全部</span>
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -640,17 +627,17 @@ export default function Home() {
       </section>
 
       {/* 视频策划 - 现代设计风格 */}
-      <section className="py-24 px-6 lg:px-8 bg-background border-t border-border">
+      <section className="py-16 md:py-24 px-6 lg:px-8 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-foreground mb-6 tracking-tight">视频策划</h2>
-            <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8"></div>
-            <p className="text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 tracking-tight">视频策划</h2>
+            <div className="w-20 md:w-24 h-1 bg-primary rounded-full mx-auto mb-6 md:mb-8"></div>
+            <p className="text-base md:text-xl text-foreground-secondary max-w-4xl mx-auto font-light leading-relaxed text-left">
               专业的视频内容策划与制作，涵盖动画、教育、商业等多个领域
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-3 md:gap-8">
             {/* 视频卡片数据 */}
             {[
               {
@@ -663,7 +650,7 @@ export default function Home() {
               },
               {
                 id: 2,
-                title: "为什么北大选课堪称'海淀赌场'？",
+                title: "为什么北大选课号称'海淀赌场'？",
                 image: "/assets/images/video-planning/video2.webp",
                 platform: "bilibili",
                 views: "156万",
@@ -676,27 +663,11 @@ export default function Home() {
                 platform: "bilibili",
                 views: "420万",
                 time: "2023.10"
-              },
-              {
-                id: 4,
-                title: "围观了一场设计比烂大赛，设计师：我不做人啦！",
-                image: "/assets/images/video-planning/video4.webp",
-                platform: "bilibili",
-                views: "320万",
-                time: "2023.08"
-              },
-              {
-                id: 5,
-                title: "警告！别碰设计师的屏幕！",
-                image: "/assets/images/video-planning/video5.webp",
-                platform: "bilibili",
-                views: "580万",
-                time: "2023.09"
               }
             ].map((video) => (
               <div
                 key={video.id}
-                className="group bg-surface border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50 cursor-pointer"
+                className="group bg-surface border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-primary/50 cursor-pointer"
                 onClick={() => window.location.href = "/video-planning"}
               >
                 <div className="relative">
@@ -705,18 +676,18 @@ export default function Home() {
                     alt={video.title}
                     className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                     onError={(e) => {
-                      e.currentTarget.src = '/api/placeholder/400/225';
+                      e.currentTarget.src = '/assets/images/video-planning/placeholder-video.webp';
                     }}
                   />
-                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
-                    <div className="w-16 h-16 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 md:w-16 h-12 md:h-16 bg-primary rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <svg className="w-6 md:w-8 h-6 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
                   </div>
-                  <div className="absolute bottom-3 right-3">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm shadow-lg ${
+                  <div className="absolute bottom-2 md:bottom-3 right-2 md:right-3">
+                    <span className={`px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium backdrop-blur-sm shadow-lg ${
                       video.platform === 'bilibili' 
                         ? 'bg-pink-500/90 text-white' 
                         : 'bg-black/80 text-white'
@@ -725,23 +696,23 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-base font-bold text-foreground h-12 mb-3 tracking-tight line-clamp-2 leading-relaxed">
+                <div className="p-2 md:p-4">
+                  <h3 className="text-xs md:text-base font-bold text-foreground h-10 md:h-14 mb-2 md:mb-3 tracking-tight line-clamp-2 leading-relaxed">
                     {video.title}
                   </h3>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center space-x-1 md:space-x-2">
+                      <div className="w-4 md:w-6 h-4 md:h-6 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <svg className="w-2 md:w-3 h-2 md:h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                       </div>
-                      <span className="text-xs font-medium text-foreground-secondary">播放量: {video.views}</span>
+                      <span className="text-xs font-medium text-foreground-secondary">{video.views}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
-                        <svg className="w-3 h-3 text-foreground-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center space-x-1 md:space-x-2">
+                      <div className="w-4 md:w-6 h-4 md:h-6 bg-accent rounded-lg flex items-center justify-center">
+                        <svg className="w-2 md:w-3 h-2 md:h-3 text-foreground-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                       </div>
@@ -754,15 +725,15 @@ export default function Home() {
             
             {/* 查看全部视频卡片 */}
             <div
-              className="border-2 border-dashed border-primary rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group row-span-1"
+              className="border-2 border-dashed border-primary rounded-xl md:rounded-2xl p-3 md:p-6 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-center items-center text-center hover:border-primary-dark group"
               onClick={() => window.location.href = "/video-planning"}
             >
-              <div className="text-4xl font-bold text-primary mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">查看全部视频</h3>
-              <p className="text-foreground-secondary text-sm mb-4">探索更多视频策划案例</p>
-              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-sm">
+              <div className="text-2xl md:text-4xl font-bold text-primary mb-2 md:mb-4 group-hover:translate-x-1 transition-transform duration-300">→</div>
+              <h3 className="text-sm md:text-lg font-bold text-foreground mb-1 md:mb-2">查看全部视频</h3>
+              <p className="text-foreground-secondary text-xs md:text-sm mb-2 md:mb-4">探索更多视频策划案例</p>
+              <div className="flex items-center text-primary hover:text-primary-dark transition-colors duration-200 font-medium text-xs md:text-sm">
                 <span>查看全部</span>
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 md:w-4 h-3 md:h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>
@@ -771,55 +742,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - 现代简约设计 */}
-      <footer className="bg-foreground text-white py-24 px-6 lg:px-8 border-t border-border">
+      {/* Footer - 真正的水平3列布局 */}
+      <footer className="bg-foreground text-white py-12 md:py-20 px-6 lg:px-8 border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-4 gap-16">
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 flex items-center justify-center shadow-lg">
-                  <div className="logo-clean w-full h-full flex items-center justify-center">
-          <img src="/assets/icons/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
-        </div>
-                </div>
-                <span className="font-bold text-xl tracking-tight">作品集</span>
-              </div>
-              <p className="text-white/80 text-lg leading-relaxed">
-                专注于内容策划、品牌营销和视频制作，致力于通过优质内容创造品牌价值。
-              </p>
+          {/* 真正的3列水平布局 */}
+          <div className="grid grid-cols-3 gap-4 md:gap-12">
+            {/* 第一列：专业技能 */}
+            <div className="text-center">
+              <h3 className="font-semibold mb-2 md:mb-6 text-xs md:text-lg tracking-tight">专业技能</h3>
+              <ul className="space-y-1 md:space-y-3">
+                {["内容策划", "品牌营销", "视频制作"].map((link, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300 text-xs md:text-base block py-1">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {[
-              {
-                title: "专业技能",
-                links: ["内容策划", "品牌营销", "视频制作", "项目管理"]
-              },
-              {
-                title: "作品分类",
-                links: ["AI应用", "策划案例", "账号运营", "产品企划"]
-              },
-              {
-                title: "联系方式",
-                links: ["邮箱联系", "社交媒体", "合作洽谈", "关于我"]
-              }
-            ].map((section, index) => (
-              <div key={index}>
-                <h3 className="font-semibold mb-8 text-lg tracking-tight">{section.title}</h3>
-                <ul className="space-y-4">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a href="#" className="text-white/80 hover:text-white transition-colors duration-300 text-lg hover:translate-x-1 inline-block">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {/* 第二列：作品分类 */}
+            <div className="text-center">
+              <h3 className="font-semibold mb-2 md:mb-6 text-xs md:text-lg tracking-tight">作品分类</h3>
+              <ul className="space-y-1 md:space-y-3">
+                {["AI应用", "策划案例", "账号运营"].map((link, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300 text-xs md:text-base block py-1">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 第三列：联系方式 */}
+            <div className="text-center">
+              <h3 className="font-semibold mb-2 md:mb-6 text-xs md:text-lg tracking-tight">联系方式</h3>
+              <ul className="space-y-1 md:space-y-3">
+                {["邮箱联系", "社交媒体", "合作洽谈"].map((link, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-white/80 hover:text-white transition-colors duration-300 text-xs md:text-base block py-1">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="border-t border-white/20 mt-16 pt-16 text-center">
-            <p className="text-white/70 text-lg">
+          {/* 底部版权信息 */}
+          <div className="border-t border-white/20 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+            <p className="text-white/70 text-sm md:text-base">
               © 2024 作品集. 保留所有权利.
             </p>
           </div>
