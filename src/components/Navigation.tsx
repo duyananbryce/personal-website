@@ -48,7 +48,7 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
   }, []);
 
   // 导航菜单项配置
-  const navItems = ['首页', '工作履历', 'AI作品集', '策划作品集'];
+  const navItems = ['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'];
 
   return (
     <>
@@ -70,12 +70,13 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
 
             {/* 桌面端导航 */}
             <div className="hidden lg:flex items-center space-x-12">
-              {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
+              {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
                 <a
                   key={item}
                   href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                     item === 'AI作品集' ? 'ai-portfolio' :
-                    item === '策划作品集' ? 'planning-portfolio' : ''}`}
+                    item === '策划作品集' ? 'planning-portfolio' :
+                    item === '视频策划' ? 'video-planning' : ''}`}
                   className={`relative text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg tracking-wide ${
                     item === currentPage ? 'text-primary' : ''
                   }`}
@@ -103,12 +104,13 @@ export default function Navigation({ currentPage = '首页' }: NavigationProps) 
           {isMobileMenuOpen && (
             <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
               <div className="px-6 py-8 space-y-6">
-                {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
+                {['首页', '工作履历', 'AI作品集', '策划作品集', '视频策划'].map((item) => (
                   <a
                     key={item}
                     href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
                       item === 'AI作品集' ? 'ai-portfolio' :
-                      item === '策划作品集' ? 'planning-portfolio' : ''}`}
+                      item === '策划作品集' ? 'planning-portfolio' :
+                      item === '视频策划' ? 'video-planning' : ''}`}
                     className={`relative block text-foreground hover:text-primary transition-colors duration-200 font-medium text-xl py-2 ${
                       item === currentPage ? 'text-primary' : ''
                     }`}
