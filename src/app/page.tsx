@@ -13,7 +13,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowDown, Menu, X, X as Close } from 'lucide-react';
+import { ArrowDown, X as Close } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 /**
  * 首页主要组件
@@ -21,97 +22,13 @@ import { ArrowDown, Menu, X, X as Close } from 'lucide-react';
  * @returns {JSX.Element} 首页完整布局
  */
 export default function Home() {
-  // 状态管理：导航栏滚动效果、移动端菜单、图片模态框
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // 状态管理：图片模态框
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  // 滚动事件监听：用于导航栏背景效果
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    
-    // 服务器端渲染兼容性检查
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* 顶部导航栏 - 现代简约主义透明背景 */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm border-b border-border-light' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-24">
-            {/* Logo */}
-            <div className="flex items-center">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="logo-clean w-full h-full flex items-center justify-center">
-          <img src="/assets/icons/logo.svg" alt="杜亚楠的作品集" className="max-w-full max-h-full" />
-        </div>
-                </div>
-                <span className="font-bold text-2xl text-foreground tracking-tight">作品集</span>
-              </div>
-            </div>
-
-            {/* 桌面端导航 */}
-            <div className="hidden lg:flex items-center space-x-12">
-              {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
-                <a
-                  key={item}
-                  href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
-                    item === 'AI作品集' ? 'ai-portfolio' :
-                    item === '策划作品集' ? 'planning-portfolio' : ''}`}
-                  className={`relative text-foreground hover:text-primary transition-colors duration-200 font-medium text-lg tracking-wide ${
-                    item === '首页' ? 'text-primary' : ''
-                  }`}
-                >
-                  {item}
-                  {item === '首页' && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
-                  )}
-                </a>
-              ))}
-            </div>
-
-            {/* 移动端菜单按钮 */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-foreground hover:text-primary transition-colors duration-200 p-2 rounded-lg hover:bg-accent/50"
-              >
-                {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-              </button>
-            </div>
-          </div>
-
-          {/* 移动端菜单 */}
-          {isMobileMenuOpen && (
-            <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-sm">
-              <div className="px-6 py-8 space-y-6">
-                {['首页', '工作履历', 'AI作品集', '策划作品集'].map((item) => (
-                  <a
-                    key={item}
-                    href={item === '首页' ? '/' : `/${item === '工作履历' ? 'project-manager' :
-                      item === 'AI作品集' ? 'ai-portfolio' :
-                      item === '策划作品集' ? 'planning-portfolio' : ''}`}
-                    className={`block text-foreground hover:text-primary transition-colors duration-200 font-medium text-xl py-2 ${
-                      item === '首页' ? 'text-primary' : ''
-                    }`}
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+      {/* 使用统一的导航组件 */}
+      <Navigation currentPage="首页" />
 
       {/* 个人简介模块 - 大胆排版与留白艺术 */}
       <section className="min-h-[80vh] flex items-center justify-center px-6 lg:px-8 pt-32 pb-20 relative">
